@@ -2,6 +2,9 @@ require_relative 'boot'
 
 require 'rails/all'
 
+ENV['GOOGLE_OAUTH_CLIENT_ID'] = '447053054136-ncnklpl2438hapmd97rg9dojt9hmcoas.apps.googleusercontent.com'
+ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = 'lGpyiH61bTysJfxLr8CkKbQa'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
