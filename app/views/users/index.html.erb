@@ -30,7 +30,7 @@
       <td><%= user.member_points %></td>
 
       <td class="actions">
-        <%= link_to("More Info", user_path(user), :class => 'action show') %>
+        <%= link_to("More Info", attendance_path(user), :class => 'action show') %>
         <%= link_to("Update Points", edit_user_path(user), :class => 'action edit') %>
       </td>
     </tr>

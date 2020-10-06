@@ -1,0 +1,1198 @@
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.254446"], ["updated_at", "2020-10-05 20:19:39.254446"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.258776"], ["updated_at", "2020-10-05 20:19:39.258776"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.261894"], ["updated_at", "2020-10-05 20:19:39.261894"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.264868"], ["updated_at", "2020-10-05 20:19:39.264868"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting1"], ["date", "2020-04-08"], ["time", "07:00:00"], ["point_amount", 5], ["created_at", "2020-10-05 20:19:39.278292"], ["updated_at", "2020-10-05 20:19:39.278292"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting2"], ["date", "2020-04-09"], ["time", "07:00:00"], ["point_amount", 3], ["created_at", "2020-10-05 20:19:39.281942"], ["updated_at", "2020-10-05 20:19:39.281942"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting3"], ["date", "2020-04-10"], ["time", "07:00:00"], ["point_amount", 2], ["created_at", "2020-10-05 20:19:39.284839"], ["updated_at", "2020-10-05 20:19:39.284839"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnNameInAttendance (20201005202741)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "attendances" RENAME COLUMN "user_id" TO "username"[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201005202741"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.6ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "derrickg"], ["created_at", "2020-10-05 20:31:31.246436"], ["updated_at", "2020-10-05 20:31:31.246436"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "hncleary"], ["created_at", "2020-10-05 20:31:31.250022"], ["updated_at", "2020-10-05 20:31:31.250022"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "phillipwong95"], ["created_at", "2020-10-05 20:31:31.252553"], ["updated_at", "2020-10-05 20:31:31.252553"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting2"], ["username", "hnpatel97"], ["created_at", "2020-10-05 20:31:31.255128"], ["updated_at", "2020-10-05 20:31:31.255128"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting2"], ["username", "derrickg"], ["created_at", "2020-10-05 20:31:31.257897"], ["updated_at", "2020-10-05 20:31:31.257897"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "derrickg"], ["created_at", "2020-10-05 20:31:31.260430"], ["updated_at", "2020-10-05 20:31:31.260430"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "phillipwong95"], ["created_at", "2020-10-05 20:31:31.262913"], ["updated_at", "2020-10-05 20:31:31.262913"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "hncleary"], ["created_at", "2020-10-05 20:31:31.265389"], ["updated_at", "2020-10-05 20:31:31.265389"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-10-05 15:52:32 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 4254)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-05 15:52:32 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 433)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/derrickgalindo/Documents/Fall2020/CSCE431/awics-member-point-tracker/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.1
+Time: 1338ms
+Built at: 10/05/2020 3:52:35 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 2816ms (Views: 2785.3ms | ActiveRecord: 5.0ms | Allocations: 31312)
+
+
+Started GET "/admins/auth/google_oauth2" for ::1 at 2020-10-05 15:52:36 -0500
+Started GET "/admins/auth/google_oauth2" for ::1 at 2020-10-05 15:52:37 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=3578fc1b5389f22219ed66286f30681a2fb2b4f475056502&code=4/4wGZY4cUhVEOYGMLRxa__zJLJywGy-GAH_mukY-dhqHHZoVjL51O4hI1VZXJSjvchd9kZ1SGXwPwSteCIT_qIkc&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=0&hd=tamu.edu&prompt=none" for ::1 at 2020-10-05 15:52:39 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"3578fc1b5389f22219ed66286f30681a2fb2b4f475056502", "code"=>"4/4wGZY4cUhVEOYGMLRxa__zJLJywGy-GAH_mukY-dhqHHZoVjL51O4hI1VZXJSjvchd9kZ1SGXwPwSteCIT_qIkc", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "derrickg@tamu.edu"], ["LIMIT", 1]]
+  ↳ app/models/admin.rb:6:in `from_google'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms | Allocations: 1675)
+
+
+Started GET "/" for ::1 at 2020-10-05 15:52:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 315.3ms | Allocations: 172539)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 5.3ms | Allocations: 175613)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `attendance_path' for #<#<Class:0x00007f994593e208>:0x00007f994593c930>
+Did you mean?  attendance_index_path):
+    30:       <td><%= user.member_points %></td>
+    31: 
+    32:       <td class="actions">
+    33:         <%= link_to("More Info", attendance_path, :class => 'action show') %>
+    34:         <%= link_to("Update Points", edit_user_path(user), :class => 'action edit') %>
+    35:       </td>
+    36:     </tr>
+  
+app/views/users/index.html.erb:33
+app/views/users/index.html.erb:24
+Started GET "/" for ::1 at 2020-10-05 15:52:55 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1469)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 8468)
+
+
+Started GET "/attendance/index" for ::1 at 2020-10-05 15:52:58 -0500
+Processing by AttendanceController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering attendance/index.html.erb within layouts/application
+  Rendered attendance/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 6233)
+
+
+Started GET "/users/5/edit" for ::1 at 2020-10-05 15:54:51 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3314)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.6ms | Allocations: 9589)
+
+
+Started GET "/attendance/index" for ::1 at 2020-10-05 15:56:03 -0500
+Processing by AttendanceController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering attendance/index.html.erb within layouts/application
+  Rendered attendance/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.9ms | Allocations: 6892)
+
+
+Started GET "/" for ::1 at 2020-10-05 15:56:25 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 8535)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 22.6ms | ActiveRecord: 11.3ms | Allocations: 25185)
+
+
+Started GET "/attendance/index.5" for ::1 at 2020-10-05 15:56:27 -0500
+Processing by AttendanceController#index as 
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering attendance/index.html.erb within layouts/application
+  Rendered attendance/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 6326)
+
+
+Started GET "/attendance/index.5" for ::1 at 2020-10-05 15:59:15 -0500
+Processing by AttendanceController#index as 
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering attendance/index.html.erb within layouts/application
+  Rendered attendance/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4154)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms | Allocations: 6980)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    14:   <table summary="User detail view" cellspacing="10">
+    15:     <tr>
+    16:       <th style="text-align:left">First Name</th>
+    17:       <td><%= @user.first_name %></td>
+    18:     </tr>
+    19:     <tr>
+    20:       <th style="text-align:left">Last Name</th>
+  
+app/views/attendance/index.html.erb:17
+Started GET "/attendance/index.5" for ::1 at 2020-10-05 16:00:57 -0500
+Processing by AttendanceController#index as 
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 9.4ms | Allocations: 8617)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/attendance_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-10-05 16:02:58 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 8534)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 42.9ms | ActiveRecord: 11.5ms | Allocations: 25181)
+
+
+Started GET "/attendance.5" for ::1 at 2020-10-05 16:03:01 -0500
+Processing by AttendanceController#index as 
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 2185)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/attendance_controller.rb:3:in `index'
+Started POST "/__web_console/repl_sessions/644bb20f48d934c63722e3abc55c8a31/trace" for ::1 at 2020-10-05 16:03:09 -0500
+Started GET "/attendance.5" for ::1 at 2020-10-05 16:05:12 -0500
+Processing by AttendanceController#index as 
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering attendance/index.html.erb within layouts/application
+  Rendered attendance/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1581)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.8ms | Allocations: 9808)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    14:   <table summary="User detail view" cellspacing="10">
+    15:     <tr>
+    16:       <th style="text-align:left">First Name</th>
+    17:       <td><%= @user.first_name %></td>
+    18:     </tr>
+    19:     <tr>
+    20:       <th style="text-align:left">Last Name</th>
+  
+app/views/attendance/index.html.erb:17
+Started GET "/" for ::1 at 2020-10-05 16:08:35 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 8437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 41.4ms | ActiveRecord: 11.3ms | Allocations: 25299)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 16:08:37 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 7269)
+
+
+Started GET "/users" for ::1 at 2020-10-05 16:08:42 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 1.0ms | Allocations: 6713)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 16:16:50 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."username" FROM "users"[0m
+  ↳ app/controllers/attendance_controller.rb:4:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1972)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.5ms | Allocations: 18536)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    39:   </table>
+    40: 
+    41:   <table>
+    42:   <% @attendances.each do |attendance| %>
+    43:     <tr>
+    44:       <td><%= attendance.event_id %></td>
+    45:       <td><%= attendance.username %></td>
+  
+app/views/attendance/show.html.erb:42
+Started GET "/attendance/5" for ::1 at 2020-10-05 16:18:23 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."username" FROM "users"[0m
+  ↳ app/controllers/attendance_controller.rb:4:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (1.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" IN ($1, $2, $3, $4)[0m  [["username", "derrickg"], ["username", "hnpatel97"], ["username", "phillipwong95"], ["username", "hncleary"]]
+  ↳ app/views/attendance/show.html.erb:42
+  Rendered attendance/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 11.6ms | ActiveRecord: 15.0ms | Allocations: 25257)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 16:19:14 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:42
+  Rendered attendance/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 9.0ms | ActiveRecord: 12.5ms | Allocations: 22836)
+
+
+Started GET "/users" for ::1 at 2020-10-05 16:45:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1498)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 1.7ms | Allocations: 7762)
+
+
+Started GET "/attendance/8" for ::1 at 2020-10-05 16:45:15 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.5ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/views/attendance/show.html.erb:42
+  Rendered attendance/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 1.6ms | Allocations: 6944)
+
+
+Started GET "/attendance/6" for ::1 at 2020-10-05 16:45:18 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/views/attendance/show.html.erb:42
+  Rendered attendance/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 1.2ms | Allocations: 6908)
+
+
+Started GET "/attendance/7" for ::1 at 2020-10-05 16:45:24 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/views/attendance/show.html.erb:42
+  Rendered attendance/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 6923)
+
+
+Started GET "/" for ::1 at 2020-10-05 17:30:21 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 8437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 22.0ms | ActiveRecord: 11.0ms | Allocations: 25109)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:30:23 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.5ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:14
+  Rendered attendance/show.html.erb within layouts/application (Duration: 14.9ms | Allocations: 3958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 24.2ms | ActiveRecord: 5.6ms | Allocations: 11464)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:31:53 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  Rendered attendance/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 17.6ms | ActiveRecord: 1.0ms | Allocations: 8487)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:32:08 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3755)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms | Allocations: 7196)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+     9: <%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+    10: 
+    11: <div class="users show">
+    12:   <h2><%= @user.first_name @user.last_name %></h2>
+    13: 
+    14:   <table>
+    15:   <% @attendances.each do |attendance| %>
+  
+app/views/attendance/show.html.erb:12
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:33:58 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  Rendered attendance/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1024)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 8582)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:34:18 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  Rendered attendance/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 8476)
+
+
+Started GET "/users" for ::1 at 2020-10-05 17:40:55 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 7724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 1.6ms | Allocations: 20151)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:40:57 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  [1m[36mAttendance Load (0.5ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1 LIMIT $2[0m  [["username", "derrickg"], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms | Allocations: 8923)
+
+
+  [1m[36mCACHE Attendance Load (0.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1 LIMIT $2[0m  [["username", "derrickg"], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `event_id' for #<Attendance::ActiveRecord_Relation:0x00007fca941f6560>):
+  
+app/controllers/attendance_controller.rb:5:in `show'
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:41:22 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:19
+  Rendered attendance/show.html.erb within layouts/application (Duration: 16.7ms | Allocations: 9455)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 15.6ms | ActiveRecord: 19.3ms | Allocations: 29404)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:42:48 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/attendance_controller.rb:5:in `puts'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1332)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 13.1ms | Allocations: 20578)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    16:     <tr>
+    17:       <td><%= attendance.event_id %></td>
+    18:       <td><%= attendance.username %></td>
+    19:       <% @events.each do |event| %>
+    20:         <tr>
+    21:         <td><%= event.point_amount %></td>
+    22:     <% end %>
+  
+app/views/attendance/show.html.erb:19
+app/views/attendance/show.html.erb:15
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:44:30 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1 LIMIT $2[0m  [["username", "derrickg"], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 10.1ms | Allocations: 21305)
+
+
+  [1m[36mCACHE Attendance Load (0.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1 LIMIT $2[0m  [["username", "derrickg"], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `event_id' for #<Attendance::ActiveRecord_Relation:0x00007fca991ee018>):
+  
+app/controllers/attendance_controller.rb:5:in `show'
+Started GET "/" for ::1 at 2020-10-05 17:49:48 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 8437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 21.8ms | ActiveRecord: 10.3ms | Allocations: 25098)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:49:50 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1566)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms | Allocations: 5514)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Aggie Women in Computer Science</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+
+<div class="users show">
+  <h2><%= @user.first_name + " " + @user.last_name %></h2>
+
+  <table>
+  <% @attendances.each do |attendance| %>
+    <tr>
+      <td><%= attendance.event_id %></td>
+      <td><%= attendance.username %></td>
+      <% @events.each do |event| %>
+        <tr>
+        <%= if event.event_name == attendance.event_id%>
+          <td><%= event.point_amount %></td>
+        <% end %>
+      <% end %>
+  <% end %>
+</table>
+
+</div>
+
+):
+1:    <h1>Aggie Women in Computer Science</h1>
+2:    
+3:    <% if !flash[:notice].blank? %>
+4:      <div class="notice">
+5:        <%= flash[:notice] %>
+6:      </div>
+7:    <% end %>
+8:    
+9:    <%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+10:    
+11:    <div class="users show">
+12:      <h2><%= @user.first_name + " " + @user.last_name %></h2>
+13:    
+14:      <table>
+15:      <% @attendances.each do |attendance| %>
+16:        <tr>
+17:          <td><%= attendance.event_id %></td>
+18:          <td><%= attendance.username %></td>
+19:          <% @events.each do |event| %>
+20:            <tr>
+21:            <%= if event.event_name == attendance.event_id%>
+22:              <td><%= event.point_amount %></td>
+23:            <% end %>
+24:          <% end %>
+25:      <% end %>
+26:    </table>
+27:    
+28:    </div>
+  
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:50:44 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1250)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 4780)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Aggie Women in Computer Science</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+
+<div class="users show">
+  <h2><%= @user.first_name + " " + @user.last_name %></h2>
+
+  <table>
+  <% @attendances.each do |attendance| %>
+    <tr>
+      <td><%= attendance.event_id %></td>
+      <td><%= attendance.username %></td>
+      <% @events.each do |event| %>
+        <tr>
+        <%= if (event.event_name == attendance.event_id)%>
+          <td><%= event.point_amount %></td>
+        <% end %>
+      <% end %>
+  <% end %>
+</table>
+
+</div>
+
+):
+1:    <h1>Aggie Women in Computer Science</h1>
+2:    
+3:    <% if !flash[:notice].blank? %>
+4:      <div class="notice">
+5:        <%= flash[:notice] %>
+6:      </div>
+7:    <% end %>
+8:    
+9:    <%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+10:    
+11:    <div class="users show">
+12:      <h2><%= @user.first_name + " " + @user.last_name %></h2>
+13:    
+14:      <table>
+15:      <% @attendances.each do |attendance| %>
+16:        <tr>
+17:          <td><%= attendance.event_id %></td>
+18:          <td><%= attendance.username %></td>
+19:          <% @events.each do |event| %>
+20:            <tr>
+21:            <%= if (event.event_name == attendance.event_id)%>
+22:              <td><%= event.point_amount %></td>
+23:            <% end %>
+24:          <% end %>
+25:      <% end %>
+26:    </table>
+27:    
+28:    </div>
+  
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:21: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:23: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:31: syntax error, unexpected end, expecting ')'
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:58:28 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1203)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.2ms | Allocations: 17185)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Aggie Women in Computer Science</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+
+<div class="users show">
+  <h2><%= @user.first_name + " " + @user.last_name %></h2>
+
+  <table>
+  <% @attendances.each do |attendance| %>
+    <tr>
+      <td><%= attendance.event_id %></td>
+      <td><%= attendance.username %></td>
+      <% @events.each do |event| %>
+          <%= if @event.event_name.equals?(attendance.event_id)%>
+            <td><%= event.point_amount %></td>
+          <% end %>
+      <% end %>
+  <% end %>
+</table>
+
+</div>
+
+):
+1:    <h1>Aggie Women in Computer Science</h1>
+2:    
+3:    <% if !flash[:notice].blank? %>
+4:      <div class="notice">
+5:        <%= flash[:notice] %>
+6:      </div>
+7:    <% end %>
+8:    
+9:    <%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+10:    
+11:    <div class="users show">
+12:      <h2><%= @user.first_name + " " + @user.last_name %></h2>
+13:    
+14:      <table>
+15:      <% @attendances.each do |attendance| %>
+16:        <tr>
+17:          <td><%= attendance.event_id %></td>
+18:          <td><%= attendance.username %></td>
+19:          <% @events.each do |event| %>
+20:              <%= if @event.event_name.equals?(attendance.event_id)%>
+21:                <td><%= event.point_amount %></td>
+22:              <% end %>
+23:          <% end %>
+24:      <% end %>
+25:    </table>
+26:    
+27:    </div>
+  
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-10-05 17:58:31 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1487)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.1ms | Allocations: 8215)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:58:34 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  Rendered attendance/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1233)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.8ms | Allocations: 3848)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Aggie Women in Computer Science</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+
+<div class="users show">
+  <h2><%= @user.first_name + " " + @user.last_name %></h2>
+
+  <table>
+  <% @attendances.each do |attendance| %>
+    <tr>
+      <td><%= attendance.event_id %></td>
+      <td><%= attendance.username %></td>
+      <% @events.each do |event| %>
+          <%= if @event.event_name.equals?(attendance.event_id)%>
+            <td><%= event.point_amount %></td>
+          <% end %>
+      <% end %>
+  <% end %>
+</table>
+
+</div>
+
+):
+1:    <h1>Aggie Women in Computer Science</h1>
+2:    
+3:    <% if !flash[:notice].blank? %>
+4:      <div class="notice">
+5:        <%= flash[:notice] %>
+6:      </div>
+7:    <% end %>
+8:    
+9:    <%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+10:    
+11:    <div class="users show">
+12:      <h2><%= @user.first_name + " " + @user.last_name %></h2>
+13:    
+14:      <table>
+15:      <% @attendances.each do |attendance| %>
+16:        <tr>
+17:          <td><%= attendance.event_id %></td>
+18:          <td><%= attendance.username %></td>
+19:          <% @events.each do |event| %>
+20:              <%= if @event.event_name.equals?(attendance.event_id)%>
+21:                <td><%= event.point_amount %></td>
+22:              <% end %>
+23:          <% end %>
+24:      <% end %>
+25:    </table>
+26:    
+27:    </div>
+  
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:20: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/attendance/show.html.erb:22: syntax error, unexpected end, expecting ')'
+app/views/attendance/show.html.erb:30: syntax error, unexpected end, expecting ')'
+Started GET "/attendance/5" for ::1 at 2020-10-05 17:59:40 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:19
+  Rendered attendance/show.html.erb within layouts/application (Duration: 21.5ms | Allocations: 10865)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 10.3ms | Allocations: 14313)
+
+
+  
+ActionView::Template::Error (undefined method `event_name' for nil:NilClass):
+    17:       <td><%= attendance.event_id %></td>
+    18:       <td><%= attendance.username %></td>
+    19:       <% @events.each do |event| %>
+    20:           <% if @event.event_name.equals?(attendance.event_id)%>
+    21:             <td><%= event.point_amount %></td>
+    22:           <% end %>
+    23:       <% end %>
+  
+app/views/attendance/show.html.erb:20
+app/views/attendance/show.html.erb:19
+app/views/attendance/show.html.erb:15
+Started GET "/attendance/5" for ::1 at 2020-10-05 18:00:00 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:19
+  Rendered attendance/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3617)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms | Allocations: 7065)
+
+
+  
+ActionView::Template::Error (undefined method `equals?' for "Meeting1":String
+Did you mean?  equal?):
+    17:       <td><%= attendance.event_id %></td>
+    18:       <td><%= attendance.username %></td>
+    19:       <% @events.each do |event| %>
+    20:           <% if event.event_name.equals?(attendance.event_id)%>
+    21:             <td><%= event.point_amount %></td>
+    22:           <% end %>
+    23:       <% end %>
+  
+app/views/attendance/show.html.erb:20
+app/views/attendance/show.html.erb:19
+app/views/attendance/show.html.erb:15
+Started GET "/" for ::1 at 2020-10-05 18:00:05 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.7ms | Allocations: 8149)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 18:00:06 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:19
+  Rendered attendance/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3300)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms | Allocations: 5925)
+
+
+  
+ActionView::Template::Error (undefined method `equals?' for "Meeting1":String
+Did you mean?  equal?):
+    17:       <td><%= attendance.event_id %></td>
+    18:       <td><%= attendance.username %></td>
+    19:       <% @events.each do |event| %>
+    20:           <% if event.event_name.equals?(attendance.event_id)%>
+    21:             <td><%= event.point_amount %></td>
+    22:           <% end %>
+    23:       <% end %>
+  
+app/views/attendance/show.html.erb:20
+app/views/attendance/show.html.erb:19
+app/views/attendance/show.html.erb:15
+Started GET "/attendance/5" for ::1 at 2020-10-05 18:00:43 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:19
+  Rendered attendance/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1831)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 1.2ms | Allocations: 9304)
+
+
+Started GET "/users" for ::1 at 2020-10-05 18:00:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 7694)
+
+
+Started GET "/attendance/6" for ::1 at 2020-10-05 18:00:52 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:19
+  Rendered attendance/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.2ms | Allocations: 7646)
+
+
+Started GET "/attendance/5" for ::1 at 2020-10-05 18:01:09 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:18
+  Rendered attendance/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 2.0ms | Allocations: 9259)
+
+
+Started GET "/users" for ::1 at 2020-10-05 18:01:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 1.2ms | Allocations: 7689)
+
+
+Started GET "/attendance/8" for ::1 at 2020-10-05 18:01:13 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:18
+  Rendered attendance/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 7661)
+
+
+Started GET "/users" for ::1 at 2020-10-05 18:01:14 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 1.4ms | Allocations: 6697)
+
+
+Started GET "/attendance/6" for ::1 at 2020-10-05 18:01:15 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:18
+  Rendered attendance/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 1.9ms | Allocations: 7611)
+
+
+Started GET "/users" for ::1 at 2020-10-05 18:01:16 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 2.0ms | Allocations: 6670)
+
+
+Started GET "/attendance/7" for ::1 at 2020-10-05 18:01:18 -0500
+Processing by AttendanceController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/attendance_controller.rb:3:in `show'
+  Rendering attendance/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/views/attendance/show.html.erb:15
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/attendance/show.html.erb:18
+  Rendered attendance/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 1.4ms | Allocations: 7644)
+
+
+Started GET "/users" for ::1 at 2020-10-05 18:01:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 2.9ms | Allocations: 6678)
+
+
