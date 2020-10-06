@@ -11,15 +11,22 @@
 <div class="users show">
   <h2><%= @user.first_name + " " + @user.last_name %></h2>
 
-  <table>
+  <table class="listing" summary="User list" cellspacing="10" style="width:600px">
+    <tr class="header"  style="text-align:left">
+      <th>Meetings</th>
+      <th>Date</th>
+      <th>Points</th>
+    </tr>
   <% @attendances.each do |attendance| %>
-    <tr>
+    <tr style="text-align:left"> 
       <td><%= attendance.event_id %></td>
       <% @events.each do |event| %>
           <% if event.event_name.match?(attendance.event_id)%>
+            <td><%= event.date.strftime('%b %e, %Y') %></td>
             <td><%= event.point_amount %></td>
           <% end %>
       <% end %>
+    </tr>
   <% end %>
 </table>
 
