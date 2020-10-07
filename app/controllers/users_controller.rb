@@ -54,15 +54,15 @@ class UsersController < ApplicationController
       @attendances = Attendance.where(:username => @username)
       @total_attendance = @attendances.count
       @multiplier = Position.where(position_title: @position_id).first.multiplier
-      @attendence_points = 0
+      @total_points = 0
       @attendances.each do |attendance|
         @events.each do |event|
           if event.event_name.match?(attendance.event_id)
-            @attendence_points = @attendence_points + event.point_amount
+            @total_points = @total_points + (event.point_amount * @multiplier)
           end
         end
       end
-      user.update_attributes(:member_points => (@multiplier * @attendence_points))
+      user.update_attributes(:member_points => @total_points)
     end
   end
 

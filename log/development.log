@@ -2120,3 +2120,409 @@ SyntaxError (C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics
 app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end
 app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end
 app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2020-10-06 20:24:05 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2020-10-06 20:24:21 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (10.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:54:in `block in update_points'
+  [1m[36mPosition Load (2.2ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:57:in `block in update_points'
+Completed 500 Internal Server Error in 874ms (ActiveRecord: 58.0ms | Allocations: 135604)
+
+
+  
+NameError (undefined local variable or method `attendance' for #<UsersController:0x000000000a885810>
+Did you mean?  attendance_url):
+  
+app/controllers/users_controller.rb:58:in `block (2 levels) in update_points'
+app/controllers/users_controller.rb:57:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-06 20:24:43 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:54:in `block in update_points'
+  [1m[36mPosition Load (0.7ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:57:in `block in update_points'
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 37.1ms | Allocations: 27588)
+
+
+  
+NoMethodError (undefined method `event_name' for nil:NilClass):
+  
+app/controllers/users_controller.rb:58:in `block (2 levels) in update_points'
+app/controllers/users_controller.rb:57:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-06 20:26:24 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:54:in `block in update_points'
+  [1m[36mPosition Load (0.8ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:57:in `block in update_points'
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 22.2ms | Allocations: 27557)
+
+
+  
+NoMethodError (undefined method `event_id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:58:in `block (2 levels) in update_points'
+app/controllers/users_controller.rb:57:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-06 20:28:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.6ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.5ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.5ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 32.4ms | Allocations: 33643)
+
+
+  
+NoMethodError (undefined method `event_id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:60:in `block (3 levels) in update_points'
+app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+app/controllers/users_controller.rb:58:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-06 20:28:49 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 6], ["updated_at", "2020-10-07 01:28:50.289323"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 6], ["updated_at", "2020-10-07 01:28:50.308822"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (47.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 3], ["updated_at", "2020-10-07 01:28:50.374497"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.4ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 3], ["updated_at", "2020-10-07 01:28:50.432907"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.6ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 3], ["updated_at", "2020-10-07 01:28:50.462385"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 3], ["updated_at", "2020-10-07 01:28:50.489060"], ["id", 8]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.4ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 575ms (Views: 189.4ms | ActiveRecord: 119.2ms | Allocations: 77474)
+
+
+Started GET "/" for ::1 at 2020-10-06 20:29:11 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.5ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.4ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 3], ["updated_at", "2020-10-07 01:29:12.250838"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (19.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.5ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 3], ["updated_at", "2020-10-07 01:29:12.302156"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.6ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mCACHE Attendance Load (0.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mCACHE Attendance Load (0.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1617)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 530ms (Views: 91.1ms | ActiveRecord: 71.4ms | Allocations: 60921)
+
+
+Started GET "/" for ::1 at 2020-10-06 20:29:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.5ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.5ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mCACHE Attendance Load (0.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.6ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mCACHE Attendance Load (0.0ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.5ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 6], ["updated_at", "2020-10-07 01:29:20.104993"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.5ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/users_controller.rb:59:in `block (2 levels) in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 6], ["updated_at", "2020-10-07 01:29:20.138132"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.4ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.5ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/patel/Documents/TAMU/Fall 2020/CSCE 431/Project/Code/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:24
+  Rendered users/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 443ms (Views: 82.6ms | ActiveRecord: 48.5ms | Allocations: 60795)
+
+
