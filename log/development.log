@@ -8016,3 +8016,48 @@ Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 615
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting3"], ["date", "2020-04-10"], ["time", "07:00:00"], ["point_amount", 2], ["created_at", "2020-10-07 20:18:40.334929"], ["updated_at", "2020-10-07 20:18:40.334929"]]
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 15:34:25 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 496)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 817ms (Views: 786.8ms | ActiveRecord: 9.0ms | Allocations: 44532)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 15:34:28 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=7d196607526306c82204571d12d3794a5d83713d6fe443da&code=4/4wE86nW5Sv4gwLsz_IW2o3Ecgxn3rGO4kSaCM3hMhlY9uHvB1nHCK50kST8cixm8b2gdi-IYGjc02mrjqjU0COM&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20openid%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 15:34:32 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"7d196607526306c82204571d12d3794a5d83713d6fe443da", "code"=>"4/4wE86nW5Sv4gwLsz_IW2o3Ecgxn3rGO4kSaCM3hMhlY9uHvB1nHCK50kST8cixm8b2gdi-IYGjc02mrjqjU0COM", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 95ms (ActiveRecord: 6.3ms | Allocations: 12660)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 15:34:32 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.0ms | Allocations: 7363)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 15:35:40 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=09ef87a99572f890fcfac568d92008ceffeb13e671f918a4&code=4/4wH462u-e1WJj9iTSTJaklBBrMOSSYU9BVsDPjtDEmd-uKVUTc6oz6GFLWduDo0cbtcwHaEAiiFSp5ML9qs0lbU&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 15:36:23 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"09ef87a99572f890fcfac568d92008ceffeb13e671f918a4", "code"=>"4/4wH462u-e1WJj9iTSTJaklBBrMOSSYU9BVsDPjtDEmd-uKVUTc6oz6GFLWduDo0cbtcwHaEAiiFSp5ML9qs0lbU", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms | Allocations: 983)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 15:36:24 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.0ms | Allocations: 7338)
+
+

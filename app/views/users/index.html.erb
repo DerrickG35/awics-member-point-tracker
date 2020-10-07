@@ -14,7 +14,7 @@
     <% if match.position_id == 'member' %>
       <p> You are unable to add users or edit member points.</p>
     <% else %>
-      <p> You have permission to add users or edit member points.</p>
+      <p> You have permission to add users.</p>
     <% end %>
   <% end %>
 <% end %>
@@ -53,13 +53,8 @@
 
       <% @userList.each do |match|%>
       <td class="actions">
-          <%= link_to("More Info", attendance_path(user), :class => 'action show') %>
+          <%= link_to("Points Breakdown", attendance_path(user), :class => 'action show') %>
       </td>
-      <% if match.position_id == 'admin' %>
-        <td class="actions">
-          <%= link_to("Update Points", edit_user_path(user), :class => 'action edit') %>
-        </td>
-      <% end %>
       <% end %>
     </tr>
     <% end %>
