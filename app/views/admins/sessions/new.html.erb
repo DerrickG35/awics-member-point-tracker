@@ -1,32 +1,3 @@
 <h2>Member Point Tracker</h2>
-<style>
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
 
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .button:hover span {
-    padding-right: 25px;
-  }
-
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-</style>
-<%= link_to "Sign in with Google", admin_google_oauth2_omniauth_authorize_path %>
-
-<button class="button" style="vertical-align:middle"><span>Login</span></button>
-
-<%= button_to "Login", admin_google_oauth2_omniauth_authorize_path, {class: 'button'} %>
+<%= button_to "Login", admin_google_oauth2_omniauth_authorize_path, {class: 'button button span'} %>

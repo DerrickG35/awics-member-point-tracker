@@ -6273,3 +6273,930 @@ DEPRECATION WARNING: update_attributes is deprecated and will be removed from Ra
 Completed 200 OK in 198ms (Views: 77.6ms | ActiveRecord: 4.2ms | Allocations: 15608)
 
 
+Started GET "/" for ::1 at 2020-10-07 12:45:28 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2020-10-07 12:45:30 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnNameInAttendance (20201005202741)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE "attendances" RENAME COLUMN "user_id" TO "username"[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201005202741"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+Started GET "/" for ::1 at 2020-10-07 12:45:30 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 4041)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:45:30 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 437ms (Views: 426.1ms | ActiveRecord: 4.7ms | Allocations: 41252)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:45:37 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 6132)
+
+
+Started GET "/" for ::1 at 2020-10-07 12:45:41 -0500
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 230)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:45:42 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 6149)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:55:36 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 450)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 8474)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 12:55:37 -0500
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:56:09 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 313)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 8348)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 12:56:14 -0500
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:56:51 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1150)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3433)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Member Point Tracker</h2>
+<style>
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+</style>
+<%= link_to "Sign in with Google", admin_google_oauth2_omniauth_authorize_path %>
+
+<button class="button" style="vertical-align:middle"><span>Login</span></button>
+
+<%= button_to <span>"Login"</span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} %>
+
+):
+1:    <h2>Member Point Tracker</h2>
+2:    <style>
+3:      .button span {
+4:        cursor: pointer;
+5:        display: inline-block;
+6:        position: relative;
+7:        transition: 0.5s;
+8:      }
+9:    
+10:      .button span:after {
+11:        content: '\00bb';
+12:        position: absolute;
+13:        opacity: 0;
+14:        top: 0;
+15:        right: -20px;
+16:        transition: 0.5s;
+17:      }
+18:    
+19:      .button:hover span {
+20:        padding-right: 25px;
+21:      }
+22:    
+23:      .button:hover span:after {
+24:        opacity: 1;
+25:        right: 0;
+26:      }
+27:    </style>
+28:    <%= link_to "Sign in with Google", admin_google_oauth2_omniauth_authorize_path %>
+29:    
+30:    <button class="button" style="vertical-align:middle"><span>Login</span></button>
+31:    
+32:    <%= button_to <span>"Login"</span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} %>
+  
+app/views/admins/sessions/new.html.erb:35: unterminated regexp meets end of file
+app/views/admins/sessions/new.html.erb:35: unmatched close parenthesis: /span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} );@output_buffer.safe_append='
+app/views/admins/sessions/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+app/views/admins/sessions/new.html.erb:35: unterminated regexp meets end of file
+app/views/admins/sessions/new.html.erb:35: unmatched close parenthesis: /span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} );@output_buffer.safe_append='
+app/views/admins/sessions/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+app/views/admins/sessions/new.html.erb:35: unterminated regexp meets end of file
+app/views/admins/sessions/new.html.erb:35: unmatched close parenthesis: /span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} );@output_buffer.safe_append='
+app/views/admins/sessions/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+app/views/admins/sessions/new.html.erb:35: unterminated regexp meets end of file
+app/views/admins/sessions/new.html.erb:35: unmatched close parenthesis: /span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} );@output_buffer.safe_append='
+app/views/admins/sessions/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+app/views/admins/sessions/new.html.erb:35: unterminated regexp meets end of file
+app/views/admins/sessions/new.html.erb:35: unmatched close parenthesis: /span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} );@output_buffer.safe_append='
+app/views/admins/sessions/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+app/views/admins/sessions/new.html.erb:35: unterminated regexp meets end of file
+app/views/admins/sessions/new.html.erb:35: unmatched close parenthesis: /span>, admin_google_oauth2_omniauth_authorize_path, {class: 'button'} );@output_buffer.safe_append='
+app/views/admins/sessions/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 12:57:11 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 315)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 8379)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:01:00 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 314)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 8332)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:01:02 -0500
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:01:10 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 313)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 8335)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:01:11 -0500
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:07:27 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 198ms (Views: 197.6ms | ActiveRecord: 0.0ms | Allocations: 21156)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:07:43 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 156ms (Views: 154.9ms | ActiveRecord: 0.0ms | Allocations: 17466)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:08:38 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.0ms | Allocations: 8358)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:08:40 -0500
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:10:44 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 192ms (Views: 190.9ms | ActiveRecord: 0.0ms | Allocations: 20707)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:10:46 -0500
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:10:56 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:10:58 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=0ff41a81436280d632bd7f35f4f4fbb54b4f598d4f35101a&code=4/4wGA26JUa-nyLoVNAvzWJjuPomi44Kgg6TI4OxbmzocxvXqgxFBkjj4oloTHVgfrBNiVyxHX3pwrjsWlnHfm6lg&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 13:11:06 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"0ff41a81436280d632bd7f35f4f4fbb54b4f598d4f35101a", "code"=>"4/4wGA26JUa-nyLoVNAvzWJjuPomi44Kgg6TI4OxbmzocxvXqgxFBkjj4oloTHVgfrBNiVyxHX3pwrjsWlnHfm6lg", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "phillipwong95@tamu.edu"], ["LIMIT", 1]]
+  ↳ app/models/admin.rb:19:in `from_google'
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 10.7ms | Allocations: 9357)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:11:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 0], ["updated_at", "2020-10-07 18:11:07.116618"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "member_points" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["member_points", 0], ["updated_at", "2020-10-07 18:11:07.135033"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:65:in `block in update_points'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 3221)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 58.8ms | ActiveRecord: 9.5ms | Allocations: 25326)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:15:24 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 212ms (Views: 190.4ms | ActiveRecord: 3.1ms | Allocations: 31729)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:15:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2456)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 3.6ms | Allocations: 19809)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "...ckground-color:": expected expression (e.g. 1px, bold), was "##9095E0}"
+        on line 49:38 of app/assets/stylesheets/styles.scss
+>> tr:nth-child(even){background-color: ##9095E0}
+
+   -------------------------------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <style>
+    11:         .flash__alert   { color: red; }
+  
+app/assets/stylesheets/styles.scss:49
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2020-10-07 13:16:06 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 197ms (Views: 175.4ms | ActiveRecord: 2.8ms | Allocations: 30544)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:16:22 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 210ms (Views: 187.6ms | ActiveRecord: 3.4ms | Allocations: 31370)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:17:08 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 182.5ms | ActiveRecord: 3.2ms | Allocations: 31437)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:18:21 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 158.3ms | ActiveRecord: 3.6ms | Allocations: 30079)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:18:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 39.0ms | ActiveRecord: 3.3ms | Allocations: 18301)
+
+
+Started GET "/admins/sign_out" for ::1 at 2020-10-07 13:21:21 -0500
+Processing by Admins::SessionsController#destroy as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 2008)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:21:21 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 7630)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:22:02 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=497284f07c26c2d020ea7e50d693219aa674923b7a2680f0&code=4/4wGF-8hc7QMTqkGji3Wi6TsJw-yX6TONJ3zxZN29QGcWjXXHsXcWl2K4B7QwKcyc3XWxaj_dNiRrCat6fmi0RNs&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 13:22:04 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"497284f07c26c2d020ea7e50d693219aa674923b7a2680f0", "code"=>"4/4wGF-8hc7QMTqkGji3Wi6TsJw-yX6TONJ3zxZN29QGcWjXXHsXcWl2K4B7QwKcyc3XWxaj_dNiRrCat6fmi0RNs", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "phillipwong95@tamu.edu"], ["LIMIT", 1]]
+  ↳ app/models/admin.rb:19:in `from_google'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1867)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:22:05 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2456)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 36.0ms | ActiveRecord: 3.3ms | Allocations: 18294)
+
+
+Started GET "/admins/sign_out" for ::1 at 2020-10-07 13:23:12 -0500
+Processing by Admins::SessionsController#destroy as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1999)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:23:12 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 172.4ms | ActiveRecord: 0.0ms | Allocations: 18497)
+
+
+Started GET "/admins/sign_out" for ::1 at 2020-10-07 13:23:12 -0500
+Processing by Admins::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/admins/sign_in
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 429)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:23:12 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 5830)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:23:18 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 158ms (Views: 157.2ms | ActiveRecord: 0.0ms | Allocations: 18448)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:25:25 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=75e52a52760870cad42e47e53fce92e0576fa3a830bbef04&code=4%2F4wF1lIG1yx1qR3Z7lDk-J-RnS-t1Ink23vZeuJ9Ra8QHMD75gW44UUOtv4XBEzdFWTWbfSAgbnML5Qdbc6N98BY&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2020-10-07 13:25:27 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"75e52a52760870cad42e47e53fce92e0576fa3a830bbef04", "code"=>"4/4wF1lIG1yx1qR3Z7lDk-J-RnS-t1Ink23vZeuJ9Ra8QHMD75gW44UUOtv4XBEzdFWTWbfSAgbnML5Qdbc6N98BY", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 1018)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 13:25:27 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 6146)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 13:25:29 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=8265a4175916aa6ec82b179b1d0a94539fa4d4d7b4bb2f31&code=4/4wGdHmsKd10WgMdSGNgOD2KAfQzLpTdibkANwFKoESztZcGpeZg6B91N7l3UZgNzIb0w0BSJaxHYvxE7W6YvhWk&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 13:25:31 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"8265a4175916aa6ec82b179b1d0a94539fa4d4d7b4bb2f31", "code"=>"4/4wGdHmsKd10WgMdSGNgOD2KAfQzLpTdibkANwFKoESztZcGpeZg6B91N7l3UZgNzIb0w0BSJaxHYvxE7W6YvhWk", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "phillipwong95@tamu.edu"], ["LIMIT", 1]]
+  ↳ app/models/admin.rb:19:in `from_google'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 1869)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:25:31 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:47
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 35.4ms | ActiveRecord: 3.1ms | Allocations: 18294)
+
+
+Started GET "/" for ::1 at 2020-10-07 13:26:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.1ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:45
+  Rendered users/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3175)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 3.4ms | Allocations: 22750)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "}": expected 1 selector or at-rule, was "."
+        on line 37:2 of app/assets/stylesheets/styles.scss
+>> }
+
+   -^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <style>
+    11:         .flash__alert   { color: red; }
+  
+app/assets/stylesheets/styles.scss:37
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2020-10-07 13:26:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "derrickg"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", "phillipwong95@tamu.edu"]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY username ASC[0m
+  ↳ app/views/users/index.html.erb:45
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2456)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 41.7ms | ActiveRecord: 3.6ms | Allocations: 18325)
+
+
