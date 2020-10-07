@@ -7,7 +7,7 @@ class Admins::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
         sign_in_and_redirect admin, event: :authentication
       else
-        flash[:alert] = t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not a valid Texas A&M gmail account."
+        flash[:alert] = t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not a valid Texas A&M gmail account, or you have not been added to the system."
         redirect_to new_admin_session_path
       end
     end
