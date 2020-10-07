@@ -7200,3 +7200,819 @@ DEPRECATION WARNING: update_attributes is deprecated and will be removed from Ra
 Completed 200 OK in 65ms (Views: 41.7ms | ActiveRecord: 3.6ms | Allocations: 18325)
 
 
+Started GET "/" for ::1 at 2020-10-07 13:50:55 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (2.1ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 14.7ms | Allocations: 18075)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-07 13:51:34 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.1ms | Allocations: 4705)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-07 13:51:36 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.2ms | Allocations: 4703)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-07 13:51:47 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.1ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 4701)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-10-07 13:53:34 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (28.4ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 43.5ms | Allocations: 20263)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 18:55:26.262423"], ["updated_at", "2020-10-07 18:55:26.262423"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 18:55:26.266984"], ["updated_at", "2020-10-07 18:55:26.266984"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 18:55:26.269810"], ["updated_at", "2020-10-07 18:55:26.269810"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 18:55:26.272363"], ["updated_at", "2020-10-07 18:55:26.272363"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (1.0ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "member"], ["multiplier", 1], ["position_title", "member"], ["created_at", "2020-10-07 18:55:26.281934"], ["updated_at", "2020-10-07 18:55:26.281934"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (0.2ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "admin"], ["multiplier", 2], ["position_title", "admin"], ["created_at", "2020-10-07 18:55:26.285436"], ["updated_at", "2020-10-07 18:55:26.285436"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-10-07 13:56:44 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.2ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.6ms | Allocations: 15602)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 18:57:29.491270"], ["updated_at", "2020-10-07 18:57:29.491270"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 18:57:29.495646"], ["updated_at", "2020-10-07 18:57:29.495646"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 18:57:29.498133"], ["updated_at", "2020-10-07 18:57:29.498133"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 18:57:29.500816"], ["updated_at", "2020-10-07 18:57:29.500816"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (0.9ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "member"], ["multiplier", 1], ["position_title", "member"], ["created_at", "2020-10-07 18:57:29.509816"], ["updated_at", "2020-10-07 18:57:29.509816"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (0.3ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "admin"], ["multiplier", 2], ["position_title", "admin"], ["created_at", "2020-10-07 18:57:29.513389"], ["updated_at", "2020-10-07 18:57:29.513389"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 18:57:56.763688"], ["updated_at", "2020-10-07 18:57:56.763688"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 18:57:56.767621"], ["updated_at", "2020-10-07 18:57:56.767621"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 18:57:56.770255"], ["updated_at", "2020-10-07 18:57:56.770255"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 18:57:56.772912"], ["updated_at", "2020-10-07 18:57:56.772912"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-10-07 13:58:46 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:50:in `update_points'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hnpatel97"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.3ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "phillipwong95"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mCACHE Position Load (0.0ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", "member"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", "hncleary"]]
+  ↳ app/controllers/users_controller.rb:58:in `block in update_points'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from block in update_points at C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/app/controllers/users_controller.rb:65)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."username" = $1[0m  [["username", ""]]
+  ↳ app/controllers/users_controller.rb:55:in `block in update_points'
+  [1m[36mPosition Load (0.2ms)[0m  [1m[34mSELECT "positions".* FROM "positions" WHERE "positions"."position_title" = $1 ORDER BY "positions"."id" ASC LIMIT $2[0m  [["position_title", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `block in update_points'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 11.3ms | Allocations: 29457)
+
+
+  
+NoMethodError (undefined method `multiplier' for nil:NilClass):
+  
+app/controllers/users_controller.rb:56:in `block in update_points'
+app/controllers/users_controller.rb:50:in `update_points'
+app/controllers/users_controller.rb:4:in `index'
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200921184301)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "position_id" character varying, "member_points" integer, "username" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200921184301"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20200923013902)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying NOT NULL, "full_name" character varying, "uid" character varying, "avatar_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923013902"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAttendances (20200923040120)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" bigserial primary key, "event_id" character varying, "user_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923040120"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20200923040151)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "event_name" character varying, "date" date, "time" time, "point_amount" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923040151"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePositions (20200923040218)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "positions" ("id" bigserial primary key, "position_id" character varying, "multiplier" integer, "position_title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923040218"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailsToUsers (20200930172121)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200930172121"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeColumnNameInAttendance (20201005202741)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "attendances" RENAME COLUMN "user_id" TO "username"[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201005202741"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-07 19:09:41.144767"], ["updated_at", "2020-10-07 19:09:41.144767"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 19:10:51.804306"], ["updated_at", "2020-10-07 19:10:51.804306"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 19:10:51.808652"], ["updated_at", "2020-10-07 19:10:51.808652"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 19:10:51.811387"], ["updated_at", "2020-10-07 19:10:51.811387"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 19:10:51.814179"], ["updated_at", "2020-10-07 19:10:51.814179"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-10-07 14:11:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 1.3ms | Allocations: 3114)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:11:28 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 263)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/Phillip/Documents/CSCE431/awics-member-point-tracker/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.1
+Time: 1774ms
+Built at: 10/07/2020 2:11:32 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4456ms (Views: 4449.9ms | ActiveRecord: 0.0ms | Allocations: 27692)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:11:34 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=9200d066e823c4de92988a4e50989c7b7931ca44c7c8fce2&code=4/4wHdFXaj0erTo7cuHPfsZ54niigedU9U3RkCVR3JmjtclK_Fg-VzZY-0VS1PuNDIhqPQHH-vc612MHg0Autf2FY&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:11:36 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"9200d066e823c4de92988a4e50989c7b7931ca44c7c8fce2", "code"=>"4/4wHdFXaj0erTo7cuHPfsZ54niigedU9U3RkCVR3JmjtclK_Fg-VzZY-0VS1PuNDIhqPQHH-vc612MHg0Autf2FY", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms | Allocations: 7653)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:11:36 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 6157)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:12:14 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=6dd2a7f3b72a3069e8d30e3fe23ba8801735b82ea8546a96&code=4/4wGCdGNGUdRDUy5q4XofCLUYtfKYhw6aImVmj5NVPwIe1-vI6qdFO4dMli4esJR0gqAAgO_ZShuYGyHR6wJ4X7w&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:12:16 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"6dd2a7f3b72a3069e8d30e3fe23ba8801735b82ea8546a96", "code"=>"4/4wGCdGNGUdRDUy5q4XofCLUYtfKYhw6aImVmj5NVPwIe1-vI6qdFO4dMli4esJR0gqAAgO_ZShuYGyHR6wJ4X7w", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 999)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:12:16 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 6141)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:13:07 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=2c041543b0ba5e76d9e2be4c9e30863740b10237f3f57620&code=4/4wGDqZzjNr_Ov_B5BlGEEm5SaAUru01Q_5XBILrKXC35ZX8lW6x6RE7bXiNCN_eGRyB64vvrek430XgUnuOqygs&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:13:10 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"2c041543b0ba5e76d9e2be4c9e30863740b10237f3f57620", "code"=>"4/4wGDqZzjNr_Ov_B5BlGEEm5SaAUru01Q_5XBILrKXC35ZX8lW6x6RE7bXiNCN_eGRyB64vvrek430XgUnuOqygs", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 981)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:13:10 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 6141)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 19:16:41.286442"], ["updated_at", "2020-10-07 19:16:41.286442"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 19:16:41.291029"], ["updated_at", "2020-10-07 19:16:41.291029"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 19:16:41.293532"], ["updated_at", "2020-10-07 19:16:41.293532"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 19:16:41.295980"], ["updated_at", "2020-10-07 19:16:41.295980"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (1.0ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "member"], ["multiplier", 1], ["position_title", "member"], ["created_at", "2020-10-07 19:16:41.305249"], ["updated_at", "2020-10-07 19:16:41.305249"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (0.2ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "admin"], ["multiplier", 2], ["position_title", "admin"], ["created_at", "2020-10-07 19:16:41.308682"], ["updated_at", "2020-10-07 19:16:41.308682"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:17:06 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=8178b39247df5fa465eb2e89d724200c98aeb122a300c078&code=4/4wH4d2eAVLMDI9sHGq9DHKiYsN_aFWZx-F_hqnm9f1voN5vHu-vCm06hUC4aHNR5oHTnDbGklec0JfJtUFqeDEY&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:17:08 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"8178b39247df5fa465eb2e89d724200c98aeb122a300c078", "code"=>"4/4wH4d2eAVLMDI9sHGq9DHKiYsN_aFWZx-F_hqnm9f1voN5vHu-vCm06hUC4aHNR5oHTnDbGklec0JfJtUFqeDEY", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1089)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:17:08 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 6157)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:17:09 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=9c2a87c2cb7a705a8ebadadc78c509ce6f503f28ad6a80e6&code=4/4wHTjAtQ0FetnBVm_62fPCYrb-pkBfHPE5MocbYd2L2v2Lv6Q9fLRv3TMB7r3j3J4JbmF7owv_bD1OzbkxcU2RY&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:17:11 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"9c2a87c2cb7a705a8ebadadc78c509ce6f503f28ad6a80e6", "code"=>"4/4wHTjAtQ0FetnBVm_62fPCYrb-pkBfHPE5MocbYd2L2v2Lv6Q9fLRv3TMB7r3j3J4JbmF7owv_bD1OzbkxcU2RY", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1089)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:17:11 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 6143)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:18:56 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=904eed7e15b4c7e7b287025fc0075d14401fe48aa87819c0&code=4/4wEmVPcp7LiHgKSg5xwp6qPdpyfuDx6mRVuS7ncZYdo9Lq-DcK0psivC1qBrpwbRp8zRcWthETquYkrGeC_ljJI&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:18:58 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"904eed7e15b4c7e7b287025fc0075d14401fe48aa87819c0", "code"=>"4/4wEmVPcp7LiHgKSg5xwp6qPdpyfuDx6mRVuS7ncZYdo9Lq-DcK0psivC1qBrpwbRp8zRcWthETquYkrGeC_ljJI", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1089)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:18:58 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms | Allocations: 6145)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (11.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "awics_mpt_development"[0m
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:21:26 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=2a049e09e2c6ca90b2fe77f0a7a508b13fa5d68f53238dae&code=4/5AEtIrmjPYHUwkEHpnt6y6Pcl_VkCrkKQb0FyoyIRXfENbDdN9-6T3GVYUqXgOakI8AVbWD4h_a3K0rRUGgonYs&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:21:28 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"2a049e09e2c6ca90b2fe77f0a7a508b13fa5d68f53238dae", "code"=>"4/5AEtIrmjPYHUwkEHpnt6y6Pcl_VkCrkKQb0FyoyIRXfENbDdN9-6T3GVYUqXgOakI8AVbWD4h_a3K0rRUGgonYs", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1089)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:21:28 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms | Allocations: 6161)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 19:27:01.554833"], ["updated_at", "2020-10-07 19:27:01.554833"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 19:27:01.559611"], ["updated_at", "2020-10-07 19:27:01.559611"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 19:27:01.562136"], ["updated_at", "2020-10-07 19:27:01.562136"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 19:27:01.564687"], ["updated_at", "2020-10-07 19:27:01.564687"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 19:27:41.022564"], ["updated_at", "2020-10-07 19:27:41.022564"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 19:27:41.026931"], ["updated_at", "2020-10-07 19:27:41.026931"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 19:27:41.029886"], ["updated_at", "2020-10-07 19:27:41.029886"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 19:27:41.032253"], ["updated_at", "2020-10-07 19:27:41.032253"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:29:29 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 8267)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:29:30 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=5b8a639805be0df97e08fef160ffc83dba6d1e2fd7f6f3f9&code=4/4wHtMoOiZolR0g5rKj9c41s7c7zk9xh5kDYTUJMuGUf9SWpVW2AiV4dy5KfU2dTx5tsQdeBBq1zOwRAIkS_jlTs&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:29:31 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"5b8a639805be0df97e08fef160ffc83dba6d1e2fd7f6f3f9", "code"=>"4/4wHtMoOiZolR0g5rKj9c41s7c7zk9xh5kDYTUJMuGUf9SWpVW2AiV4dy5KfU2dTx5tsQdeBBq1zOwRAIkS_jlTs", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms | Allocations: 1381)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:29:32 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms | Allocations: 6162)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 19:32:45.605997"], ["updated_at", "2020-10-07 19:32:45.605997"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 19:32:45.610043"], ["updated_at", "2020-10-07 19:32:45.610043"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 19:32:45.612843"], ["updated_at", "2020-10-07 19:32:45.612843"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 19:32:45.615575"], ["updated_at", "2020-10-07 19:32:45.615575"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (1.5ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting1"], ["date", "2020-04-08"], ["time", "07:00:00"], ["point_amount", 5], ["created_at", "2020-10-07 19:32:45.626543"], ["updated_at", "2020-10-07 19:32:45.626543"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting2"], ["date", "2020-04-09"], ["time", "07:00:00"], ["point_amount", 3], ["created_at", "2020-10-07 19:32:45.634123"], ["updated_at", "2020-10-07 19:32:45.634123"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting3"], ["date", "2020-04-10"], ["time", "07:00:00"], ["point_amount", 2], ["created_at", "2020-10-07 19:32:45.637681"], ["updated_at", "2020-10-07 19:32:45.637681"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:33:14 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=d3c44959122049f365ff3a47e63a428f5bf4ec7247b50611&code=4/4wGD_FCD6XqkhztcU5320B5ieHL4UcHqku5sA4usnKx0jywfU_ZuN0c7_DcRZ-ambDE1UG5fccF8Fg4_sYeiCJ4&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:33:16 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"d3c44959122049f365ff3a47e63a428f5bf4ec7247b50611", "code"=>"4/4wGD_FCD6XqkhztcU5320B5ieHL4UcHqku5sA4usnKx0jywfU_ZuN0c7_DcRZ-ambDE1UG5fccF8Fg4_sYeiCJ4", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1414)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:33:16 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 6137)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:33:28 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=b1ff451876eaf425e2d05bc7036ecd70e6f06b1046feb758&code=4%2F4wFcmgpoEYeyNuFyIPIYUPfpvaIvrmQYH8x_PK6yg5Mpa2pgONX8Q4Oo2ezvSIQKMVOpPkqMnsR4ZyEQvQ9Czdo&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&hd=tamu.edu&prompt=consent" for ::1 at 2020-10-07 14:33:37 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"b1ff451876eaf425e2d05bc7036ecd70e6f06b1046feb758", "code"=>"4/4wFcmgpoEYeyNuFyIPIYUPfpvaIvrmQYH8x_PK6yg5Mpa2pgONX8Q4Oo2ezvSIQKMVOpPkqMnsR4ZyEQvQ9Czdo", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"consent"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1414)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:33:37 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 6145)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 19:34:15.197540"], ["updated_at", "2020-10-07 19:34:15.197540"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 19:34:15.202229"], ["updated_at", "2020-10-07 19:34:15.202229"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 19:34:15.204797"], ["updated_at", "2020-10-07 19:34:15.204797"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 19:34:15.207320"], ["updated_at", "2020-10-07 19:34:15.207320"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (1.1ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "derrickg"], ["created_at", "2020-10-07 19:34:15.215853"], ["updated_at", "2020-10-07 19:34:15.215853"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "hncleary"], ["created_at", "2020-10-07 19:34:15.219633"], ["updated_at", "2020-10-07 19:34:15.219633"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "phillipwong95"], ["created_at", "2020-10-07 19:34:15.222396"], ["updated_at", "2020-10-07 19:34:15.222396"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting2"], ["username", "hnpatel97"], ["created_at", "2020-10-07 19:34:15.224928"], ["updated_at", "2020-10-07 19:34:15.224928"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting2"], ["username", "derrickg"], ["created_at", "2020-10-07 19:34:15.227722"], ["updated_at", "2020-10-07 19:34:15.227722"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "derrickg"], ["created_at", "2020-10-07 19:34:15.235896"], ["updated_at", "2020-10-07 19:34:15.235896"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "phillipwong95"], ["created_at", "2020-10-07 19:34:15.238514"], ["updated_at", "2020-10-07 19:34:15.238514"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "hncleary"], ["created_at", "2020-10-07 19:34:15.241003"], ["updated_at", "2020-10-07 19:34:15.241003"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:34:39 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=13ab2ea4bade9f9b03de268ad2da1be0632f45a47b55593c&code=4/4wHdXRKa4-pvAxemIcR2wOj2i9mwigPUBfKosX07qU7iiyp3hqBX1krW3VV2YCGxSvqAB3BAzmpqPljdy_aUwzA&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:34:41 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"13ab2ea4bade9f9b03de268ad2da1be0632f45a47b55593c", "code"=>"4/4wHdXRKa4-pvAxemIcR2wOj2i9mwigPUBfKosX07qU7iiyp3hqBX1krW3VV2YCGxSvqAB3BAzmpqPljdy_aUwzA", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:34:41 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 6151)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 14:46:11 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=e7d37ff7e295b5fa0ed7cbb216d52403c3f605687c560ebf&code=4/4wExEIo5Jc4TLypJ96221DSQ1RxQcEsb9jaY7AQw40TzPQEqxGgidkudQA-5aomodpYXzzms8vlzc5PFC6FtIXY&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 14:46:13 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"e7d37ff7e295b5fa0ed7cbb216d52403c3f605687c560ebf", "code"=>"4/4wExEIo5Jc4TLypJ96221DSQ1RxQcEsb9jaY7AQw40TzPQEqxGgidkudQA-5aomodpYXzzms8vlzc5PFC6FtIXY", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms | Allocations: 1613)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 14:46:13 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 6150)
+
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (21.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200921184301)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "position_id" character varying, "member_points" integer, "username" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200921184301"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20200923013902)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying NOT NULL, "full_name" character varying, "uid" character varying, "avatar_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923013902"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAttendances (20200923040120)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" bigserial primary key, "event_id" character varying, "user_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923040120"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20200923040151)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "event_name" character varying, "date" date, "time" time, "point_amount" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923040151"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePositions (20200923040218)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "positions" ("id" bigserial primary key, "position_id" character varying, "multiplier" integer, "position_title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200923040218"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailsToUsers (20200930172121)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200930172121"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeColumnNameInAttendance (20201005202741)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "attendances" RENAME COLUMN "user_id" TO "username"[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201005202741"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-07 20:14:21.438763"], ["updated_at", "2020-10-07 20:14:21.438763"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 20:15:52.634215"], ["updated_at", "2020-10-07 20:15:52.634215"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 20:15:52.638116"], ["updated_at", "2020-10-07 20:15:52.638116"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 20:15:52.640458"], ["updated_at", "2020-10-07 20:15:52.640458"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 20:15:52.642934"], ["updated_at", "2020-10-07 20:15:52.642934"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-10-07 15:17:33 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms | Allocations: 1474)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 15:17:33 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 486)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 302ms (Views: 283.7ms | ActiveRecord: 5.5ms | Allocations: 19186)
+
+
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 15:17:35 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=d0b7446475d242769a1e723307a81315b8f9310fb13e4e9b&code=4/4wHY3t1j2Ia4DXIrlkDzskDiyN013u4gGnKELh2ALNEjWjXDl3KpHQiD6edOb8E8zAeu91kYEV0AU2-wTEgijxs&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 15:17:37 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"d0b7446475d242769a1e723307a81315b8f9310fb13e4e9b", "code"=>"4/4wHY3t1j2Ia4DXIrlkDzskDiyN013u4gGnKELh2ALNEjWjXDl3KpHQiD6edOb8E8zAeu91kYEV0AU2-wTEgijxs", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 21ms (ActiveRecord: 4.2ms | Allocations: 8260)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 15:17:37 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 6149)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 20:18:08.864111"], ["updated_at", "2020-10-07 20:18:08.864111"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 20:18:08.870020"], ["updated_at", "2020-10-07 20:18:08.870020"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 20:18:08.872612"], ["updated_at", "2020-10-07 20:18:08.872612"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 20:18:08.875067"], ["updated_at", "2020-10-07 20:18:08.875067"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (1.0ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "member"], ["multiplier", 1], ["position_title", "member"], ["created_at", "2020-10-07 20:18:08.888192"], ["updated_at", "2020-10-07 20:18:08.888192"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPosition Create (0.2ms)[0m  [1m[32mINSERT INTO "positions" ("position_id", "multiplier", "position_title", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["position_id", "admin"], ["multiplier", 2], ["position_title", "admin"], ["created_at", "2020-10-07 20:18:08.891860"], ["updated_at", "2020-10-07 20:18:08.891860"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/admins/auth/google_oauth2" for ::1 at 2020-10-07 15:18:20 -0500
+Started GET "/admins/auth/google_oauth2/callback?state=a40bdf70ad8a5323171db8b8dcc62c62e2e9697b269914a6&code=4/4wGH9hEpJmHzxT2Yp1MCzYR-Kqm74vXpn3RG3mcUe5c3Ejwdff8-myw3lo1wuQ8poHvQA_U6yL7qANG09xxIYjw&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=tamu.edu&prompt=none" for ::1 at 2020-10-07 15:18:22 -0500
+Processing by Admins::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"a40bdf70ad8a5323171db8b8dcc62c62e2e9697b269914a6", "code"=>"4/4wGH9hEpJmHzxT2Yp1MCzYR-Kqm74vXpn3RG3mcUe5c3Ejwdff8-myw3lo1wuQ8poHvQA_U6yL7qANG09xxIYjw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"tamu.edu", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/models/admin.rb:8:in `from_google'
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1107)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-07 15:18:22 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 6150)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-07 20:18:40.302909"], ["updated_at", "2020-10-07 20:18:40.302909"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-07 20:18:40.307208"], ["updated_at", "2020-10-07 20:18:40.307208"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-07 20:18:40.309831"], ["updated_at", "2020-10-07 20:18:40.309831"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-07 20:18:40.312419"], ["updated_at", "2020-10-07 20:18:40.312419"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting1"], ["date", "2020-04-08"], ["time", "07:00:00"], ["point_amount", 5], ["created_at", "2020-10-07 20:18:40.326549"], ["updated_at", "2020-10-07 20:18:40.326549"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting2"], ["date", "2020-04-09"], ["time", "07:00:00"], ["point_amount", 3], ["created_at", "2020-10-07 20:18:40.332346"], ["updated_at", "2020-10-07 20:18:40.332346"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting3"], ["date", "2020-04-10"], ["time", "07:00:00"], ["point_amount", 2], ["created_at", "2020-10-07 20:18:40.334929"], ["updated_at", "2020-10-07 20:18:40.334929"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
