@@ -1,0 +1,75 @@
+<h3>You're logged in! Welcome to the Admin Dashboard!</h3>
+
+
+<% @current_user = Admin.where(id: 1) %>
+<% @current_user.each do |user| %>
+  <h4>You are currently logged in as: </h4>
+  <h4> <%= user.full_name %> - <%= user.email %></h4>
+
+  <% @userList = User.where(:email => user.email) %>
+  <% @userList.each do |match|%>
+    <% if !match.email.blank? %>
+      <h4> You exist in the database as a: <%= match.position_id %> <h4>
+    <% end %>
+    <% if match.position_id == 'member' %>
+      <p> You are unable to add users or edit member points.</p>
+    <% else %>
+      <p> You have permission to add users or edit member points.</p>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
+<%= link_to "Sign Out", destroy_admin_session_path %>
+
+<h1>Aggie Women in Computer Science</h1>
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="users index">
+
+  <h2>Members</h2>
+
+  <table class="listing" summary="User list" cellspacing="10" style="width:600px">
+    <tr class="header"  style="text-align:left">
+      <th>NetID</th>
+      <th>Email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Position</th>
+      <th>Points</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr  style="text-align:left">
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.position_id %></td>
+      <td><%= user.member_points %></td>
+
+      <% @userList.each do |match|%>
+      <% if match.position_id == 'admin' %>
+        <td class="actions">
+          <%= link_to("More Info", user_path(user), :class => 'action show') %>
+        </td>
+        <td class="actions">
+          <%= link_to("Update Points", edit_user_path(user), :class => 'action edit') %>
+        </td>
+      <% end %>
+      <% end %>
+    </tr>
+    <% end %>
+  </table>
+<br>
+  <% @userList.each do |match|%>
+  <% if match.position_id == 'admin' %>
+    <%= link_to("Add New Member", new_user_path, :class => 'action new') %>
+  <% end %>
+  <% end %>
+</div>
