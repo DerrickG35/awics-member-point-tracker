@@ -54,10 +54,10 @@
       <td><%= user.member_points %></td>
 
       <% @userList.each do |match|%>
-      <% if match.position_id == 'admin' %>
-        <td class="actions">
+      <td class="actions">
           <%= link_to("More Info", attendance_path(user), :class => 'action show') %>
-        </td>
+      </td>
+      <% if match.position_id == 'admin' %>
         <td class="actions">
           <%= link_to("Update Points", edit_user_path(user), :class => 'action edit') %>
         </td>
