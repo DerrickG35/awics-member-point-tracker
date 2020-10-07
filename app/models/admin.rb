@@ -10,7 +10,7 @@ class Admin < ApplicationRecord
         userExists = true
         break
       end
-      if userExists = false
+      if userExists == false
         return nil
       end
     end

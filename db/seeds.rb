@@ -29,3 +29,8 @@ if ENV['Attendance']
     Attendance.create(event_id: 'Meeting3', username: 'phillipwong95')
     Attendance.create(event_id: 'Meeting3', username: 'hncleary')
 end
+
+if ENV['Position']
+    Position.create(position_id: 'member', multiplier: 1, position_title: 'member')
+    Position.create(position_id: 'admin', multiplier: 2, position_title: 'admin')
+end
