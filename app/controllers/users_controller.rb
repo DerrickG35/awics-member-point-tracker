@@ -53,7 +53,7 @@ class UsersController < ApplicationController
       @events = Event.all
       @attendances = Attendance.where(:username => @username)
       @total_attendance = @attendances.count
-      @multiplier = Position.where(position_title: @position_id).first.multiplier
+      # @multiplier = Position.where(position_title: @position_id).first.multiplier
       @total_points = 0
       @attendances.each do |attendance|
         @events.each do |event|
