@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    update_points
     @users = User.sorted
   end
 
@@ -44,4 +45,15 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :position_id, :member_points, :username, :password)
   end
+
+  def update_points
+    User.all.each do |user|
+      @username = user.username
+      @position_id = user.position_id
+      @total_attendance = Attendance.where(:username => @username).count
+      @multiplier = Position.where(position_title: @position_id).first.multiplier
+      user.update_attributes(:member_points => (@multiplier * @total_attendance))
+    end
+  end
+
 end

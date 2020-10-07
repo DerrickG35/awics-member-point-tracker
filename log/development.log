@@ -72,6 +72,86 @@ Processing by Admins::SessionsController#new as HTML
 Version: webpack 4.44.1
 Time: 2089ms
 Built at: 10/06/2020 1:44:13 PM
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Galindo"], ["position_id", "member"], ["member_points", 0], ["username", "derrickg"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.254446"], ["updated_at", "2020-10-05 20:19:39.254446"], ["email", "derrickg@tamu.edu"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hard"], ["last_name", "Patel"], ["position_id", "admin"], ["member_points", 0], ["username", "hnpatel97"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.258776"], ["updated_at", "2020-10-05 20:19:39.258776"], ["email", "hnpatel97@tamu.edu"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Phillip"], ["last_name", "Wong"], ["position_id", "member"], ["member_points", 0], ["username", "phillipwong95"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.261894"], ["updated_at", "2020-10-05 20:19:39.261894"], ["email", "phillipwong95@tamu.edu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "position_id", "member_points", "username", "password", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Hunter"], ["last_name", "Cleary"], ["position_id", "member"], ["member_points", 0], ["username", "hncleary"], ["password", "password"], ["created_at", "2020-10-05 20:19:39.264868"], ["updated_at", "2020-10-05 20:19:39.264868"], ["email", "hncleary@tamu.edu"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting1"], ["date", "2020-04-08"], ["time", "07:00:00"], ["point_amount", 5], ["created_at", "2020-10-05 20:19:39.278292"], ["updated_at", "2020-10-05 20:19:39.278292"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting2"], ["date", "2020-04-09"], ["time", "07:00:00"], ["point_amount", 3], ["created_at", "2020-10-05 20:19:39.281942"], ["updated_at", "2020-10-05 20:19:39.281942"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "date", "time", "point_amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["event_name", "Meeting3"], ["date", "2020-04-10"], ["time", "07:00:00"], ["point_amount", 2], ["created_at", "2020-10-05 20:19:39.284839"], ["updated_at", "2020-10-05 20:19:39.284839"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5021591229957611190)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnNameInAttendance (20201005202741)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "attendances" RENAME COLUMN "user_id" TO "username"[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201005202741"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5021591229957611190)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.6ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "derrickg"], ["created_at", "2020-10-05 20:31:31.246436"], ["updated_at", "2020-10-05 20:31:31.246436"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "hncleary"], ["created_at", "2020-10-05 20:31:31.250022"], ["updated_at", "2020-10-05 20:31:31.250022"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting1"], ["username", "phillipwong95"], ["created_at", "2020-10-05 20:31:31.252553"], ["updated_at", "2020-10-05 20:31:31.252553"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting2"], ["username", "hnpatel97"], ["created_at", "2020-10-05 20:31:31.255128"], ["updated_at", "2020-10-05 20:31:31.255128"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting2"], ["username", "derrickg"], ["created_at", "2020-10-05 20:31:31.257897"], ["updated_at", "2020-10-05 20:31:31.257897"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "derrickg"], ["created_at", "2020-10-05 20:31:31.260430"], ["updated_at", "2020-10-05 20:31:31.260430"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "phillipwong95"], ["created_at", "2020-10-05 20:31:31.262913"], ["updated_at", "2020-10-05 20:31:31.262913"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("event_id", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", "Meeting3"], ["username", "hncleary"], ["created_at", "2020-10-05 20:31:31.265389"], ["updated_at", "2020-10-05 20:31:31.265389"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-10-05 15:52:32 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 4254)
+
+
+Started GET "/admins/sign_in" for ::1 at 2020-10-05 15:52:32 -0500
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 433)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/derrickgalindo/Documents/Fall2020/CSCE431/awics-member-point-tracker/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.1
+Time: 1338ms
+Built at: 10/05/2020 3:52:35 PM
                                      Asset       Size       Chunks                         Chunk Names
     js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
 js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
