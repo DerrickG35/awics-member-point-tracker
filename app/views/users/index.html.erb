@@ -1,27 +1,12 @@
-<h3>You're logged in! Welcome to the Admin Dashboard!</h3>
-
-
 <% @current_user = Admin.where(id: 1) %>
 <% @current_user.each do |user| %>
-  <h4>You are currently logged in as: </h4>
-  <h4> <%= user.full_name %> - <%= user.email %></h4>
-
   <% @userList = User.where(:email => user.email) %>
   <% @userList.each do |match|%>
     <% if !match.email.blank? %>
-      <h4> You exist in the database as a: <%= match.position_id %> <h4>
-    <% end %>
-    <% if match.position_id == 'member' %>
-      <p> You are unable to add users or edit member points.</p>
-    <% else %>
-      <p> You have permission to add users or edit member points.</p>
+      <h4>Welcome: <%= user.full_name %> - <%= user.email %> (<%= match.position_id %>) <h4>
     <% end %>
   <% end %>
 <% end %>
-
-
-
-<%= link_to "Sign Out", destroy_admin_session_path %>
 
 <% if !flash[:notice].blank? %>
   <div class="notice">
@@ -31,10 +16,10 @@
 
 <div class="users index">
 
-  <h2>Members</h2>
+  <h1>Members</h1>
 
-  <table class="listing" summary="User list" cellspacing="10" style="width:600px">
-    <tr class="header"  style="text-align:left">
+  <table class="table_center" summary="User list" cellspacing="10" style="width:700px">
+    <tr>
       <th>NetID</th>
       <th>Email</th>
       <th>First Name</th>
@@ -64,10 +49,3 @@
     </tr>
     <% end %>
   </table>
-<br>
-  <% @userList.each do |match|%>
-  <% if match.position_id == 'admin' %>
-    <%= link_to("Add New Member", new_user_path, :class => 'action new') %>
-  <% end %>
-  <% end %>
-</div>

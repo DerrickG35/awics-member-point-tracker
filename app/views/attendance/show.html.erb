@@ -1,24 +1,20 @@
-<h1>Aggie Women in Computer Science</h1>
-
 <% if !flash[:notice].blank? %>
   <div class="notice">
     <%= flash[:notice] %>
   </div>
 <% end %>
 
-<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
-
 <div class="users show">
-  <h2><%= @user.first_name + " " + @user.last_name %></h2>
+  <h1><%= @user.first_name + " " + @user.last_name %></h1>
 
-  <table class="listing" summary="User list" cellspacing="10" style="width:600px">
+  <table class="table_center" summary="User list" cellspacing="10" style="width:600px">
     <tr class="header"  style="text-align:left">
       <th>Meetings</th>
       <th>Date</th>
       <th>Points</th>
     </tr>
   <% @attendances.each do |attendance| %>
-    <tr style="text-align:left"> 
+    <tr style="text-align:left">
       <td><%= attendance.event_id %></td>
       <% @events.each do |event| %>
           <% if event.event_name.match?(attendance.event_id)%>
