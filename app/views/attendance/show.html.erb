@@ -24,7 +24,7 @@
       <% @events.each do |event| %>
           <% if event.event_name.match?(attendance.event_id)%>
             <td><%= event.date.strftime('%b %e, %Y') %></td>
-            <td><%= event.point_amount %></td>
+            <td><%= event.point_amount * Position.where(position_title: @user.position_id).first.multiplier %></td>
           <% end %>
       <% end %>
     </tr>
