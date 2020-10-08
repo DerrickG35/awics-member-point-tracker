@@ -1,0 +1,21 @@
+<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+
+<div class="users edit">
+  <h1>Update Member Points</h1>
+  <td><%= @user.first_name %> <%= @user.last_name %></td>
+
+  <%= form_for(@user) do |f| %>
+
+    <table summary="Member Points fields" cellspacing="15">
+      <tr>
+        <th>Member Points</th>
+        <td><%= f.text_field(:member_points) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Member Points") %>
+    </div>
+
+  <% end %>
+</div>
