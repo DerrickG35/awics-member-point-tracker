@@ -10,6 +10,7 @@
 
 <div class="users show">
   <h2><%= @user.first_name + " " + @user.last_name %></h2>
+  <h3>Total Points: <%= @user.member_points%></h3>
 
   <table class="listing" summary="User list" cellspacing="10" style="width:600px">
     <tr class="header"  style="text-align:left">
@@ -18,7 +19,7 @@
       <th>Points</th>
     </tr>
   <% @attendances.each do |attendance| %>
-    <tr style="text-align:left"> 
+    <tr style="text-align:left">
       <td><%= attendance.event_id %></td>
       <% @events.each do |event| %>
           <% if event.event_name.match?(attendance.event_id)%>
