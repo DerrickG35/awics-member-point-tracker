@@ -16,7 +16,9 @@
   </head>
 
   <body>
-    <%= image_tag("AWICS_logo.png", width: '200px') %>
+    <div class='logoContainer'>
+    <%= image_tag("AWICS_logo.png", width: '200px', :class => "siteLogo")   %>
+    </div>
     <% if !current_page?new_admin_session_path %>
       <ul>
           <li><%= link_to "Members List", users_path %></li>
@@ -32,9 +34,6 @@
           <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
       </ul>
     <% end %>
-    <div class='logoContainer'>
-    <%= image_tag("AWICS_logo.png", width: '200px', :class => "siteLogo")   %>
-    </div>
     <% if flash.any? %>
       <% flash.each do |key, value| -%>
         <section class="flash flash__<%= key %>"><%= value.html_safe %></section>
