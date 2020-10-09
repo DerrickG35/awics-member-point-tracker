@@ -17,3 +17,98 @@
  .actions{
      width: 300px;
  }
+
+ .listing{
+     align-content: center;
+ }
+
+ .loginCard {
+     width: 35%;
+     margin: auto;
+     background-color: #9697cb;
+     border-radius: 15px;
+     margin-top: 5%;
+ }
+
+ .titleHeader {
+     /* background-color: red; */
+     width:50%;
+     text-align: center;
+     margin: auto;
+     padding-top: 15px;
+ }
+
+ .buttonContainer {
+     margin: auto;
+     /* background-color: red; */
+     width:50%;
+     text-align: center;
+     padding-top: 35px;
+     padding-bottom: 50px;
+
+}
+
+.subtitleHeader {
+    /* background-color: red; */
+    width:50%;
+    text-align: center;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.logoContainer {
+    background-color: #9697cb;
+    width: 100%;
+    margin: auto;
+}
+
+.siteLogo {
+    margin-left: 42%;
+    align-content: center;
+    background-color: mediumpurple;
+    width: 16%;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.userAvatar {
+    width: 108px;
+    border-radius: 50%;
+    float: left;
+}
+
+.currentLoginCard {
+    background-color: #9697cb;
+    border-radius: 15px;
+    padding: 10px;
+    width: 24%;
+    margin-left:38%;
+    text-align: left;
+}
+
+.avatarContainer {
+    float: left;
+    padding: 10px;
+    height: 100%;
+}
+
+.userInfoContainer {
+    /* width: 74%; */
+    float: right;
+}
+
+.listing {
+    width: 50%;
+    margin: auto;
+
+}
+
+.back-link {
+    color: white;
+    background-color: #9697cb;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+}
