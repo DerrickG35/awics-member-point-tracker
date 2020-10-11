@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AttendanceController < ApplicationController
   def show
     @user = User.find(params[:id])
