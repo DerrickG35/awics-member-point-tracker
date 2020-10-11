@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# defines how an admin class is created for the most recent new login to the site
 class Admin < ApplicationRecord
   devise :omniauthable, omniauth_providers: [:google_oauth2]
 

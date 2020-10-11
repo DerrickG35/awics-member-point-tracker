@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+#  users contoller for main application and database
 class UsersController < ApplicationController
   def index
     update_points
