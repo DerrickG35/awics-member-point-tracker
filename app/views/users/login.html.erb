@@ -3,6 +3,9 @@
     <h2 class='titleHeader'>Member Point Tracker</h2>
     <h4 class='subtitleHeader'>Click the button below to login with your TAMU associated google account</h4>
     <div class='buttonContainer'>
-        <%= button_to "Login", admin_google_oauth2_omniauth_authorize_path, {class: 'button'} %>
+        <%# <%= button_to "Login", users_path , {class: 'button'}  %>
+        <%= link_to "Login", users_path, {class: 'button'} %>
+
+        <%# <%= link_to("Points Breakdown", attendance_path(user), :class => 'action show') %> 
     </div>
 </div>
