@@ -19,6 +19,21 @@
     <div class='logoContainer'>
     <%= image_tag("AWICS_logo.png", width: '200px', :class => "siteLogo")   %>
     </div>
+    <% if !current_page?new_admin_session_path %>
+      <ul>
+          <li><%= link_to "Members List", users_path %></li>
+          <% @current_user = Admin.where(id: 1) %>
+          <% @current_user.each do |user| %>
+            <% @userList = User.where(:email => user.email) %>
+            <% @userList.each do |match|%>
+            <% if match.position_id == 'admin' %>
+              <li><%= link_to "Add New Member", new_user_path %></li>
+            <% end %>
+          <% end %>
+          <% end %>
+          <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
+      </ul>
+    <% end %>
     <% if flash.any? %>
       <% flash.each do |key, value| -%>
         <section class="flash flash__<%= key %>"><%= value.html_safe %></section>

@@ -1,6 +1,6 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  #get 'event/show'
+Rails.application.routes.draw do
   resources :attendance
   resources :event
   root to: 'users#index'

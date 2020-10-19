@@ -1,5 +1,7 @@
-class User < ApplicationRecord
+# frozen_string_literal: true
 
-  scope :sorted, lambda { order("username ASC")}
-  scope :search, lambda {|query| where(["username LIKE ?", "%#{query}%"])}
+#  method for sorting users within the main database
+class User < ApplicationRecord
+  scope :sorted, -> { order('username ASC') }
+  scope :search, ->(query) { where(['username LIKE ?', "%#{query}%"]) }
 end

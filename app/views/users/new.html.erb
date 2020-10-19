@@ -1,13 +1,9 @@
-<h1>Aggie Women in Computer Science</h1>
-
-<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
-
 <div class="users new">
-  <h2>Add a New Member</h2>
+  <h1>Add a New Member</h1>
 
   <%= form_for(@user) do |f| %>
 
-    <table summary="User form fields" cellspacing="15">
+    <table class="table_center" summary="User form fields" cellspacing="10" style="width:500px">
       <tr>
         <th>First Name</th>
         <td><%= f.text_field(:first_name) %></td>
@@ -33,10 +29,8 @@
         <td><%= f.text_field(:email) %></td>
       </tr>
     </table>
-
-    <div class="form-buttons">
-      <%= f.submit("Add Member") %>
+    <div class='button_center'>
+      <%= f.submit "Add Member", :class=>'button'  %>
     </div>
-
   <% end %>
 </div>

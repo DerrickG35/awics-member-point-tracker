@@ -20,13 +20,8 @@
           <p> You have permission to add users.</p>
         <% end %>
       <% end %>
-  <%= link_to "Sign Out", destroy_admin_session_path %>
   <% end %>
 </div>
-
-
-
-
 
 <% if !flash[:notice].blank? %>
   <div class="notice">
@@ -36,8 +31,7 @@
 
 <div class="users index">
 
-  <h2 class='centerText' >Members</h2>
-
+  <h1>Members</h1>
   <table class="listing" summary="User list" cellspacing="10" style="width:1800px">
     <tr class="header"  style="text-align:left">
       <th>NetID</th>
@@ -55,7 +49,6 @@
       <td><%= user.last_name %></td>
       <td><%= user.position_id %></td>
       <td><%= user.member_points %></td>
-
       <% @userList.each do |match|%>
       <td class="actions">
           <%= link_to("Points Breakdown", attendance_path(user), :class => 'action show') %>
