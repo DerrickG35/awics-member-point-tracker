@@ -7,10 +7,4 @@ class AttendanceController < ApplicationController
     @attendances = Attendance.where(username: @user.username)
     @events = Event.all
   end
-
-  private
-
-  def user_params
-    params.require(:user).permit(:first_name, :last_name, :position_id, :member_points, :username, :password)
-  end
 end
