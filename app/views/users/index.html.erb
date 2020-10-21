@@ -57,3 +57,13 @@
     </tr>
     <% end %>
   </table>
+<br>
+  <% @userList.each do |match|%>
+  <% if match.position_id == 'admin' %>
+    <%= link_to("Add New Member", new_user_path, :class => 'action new') %>
+    <br>
+    <%= link_to("Events", event_path(@users), :class => 'action show') %>
+
+  <% end %>
+  <% end %>
+</div>
