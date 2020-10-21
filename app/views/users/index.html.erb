@@ -15,7 +15,7 @@
           <p> Position: <%= match.position_id %> <p>
         <% end %>
         <% if match.position_id == 'member' %>
-          <p> You are unable to add users or edit member points.</p>
+          <p> You currently have <%= match.member_points %> points.</p>
         <% else %>
           <p> You have permission to add users.</p>
         <% end %>
@@ -28,32 +28,43 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
+<% @current_user = Admin.where(id: 1) %>
+<% @current_user.each do |user| %>
+  <% @userList = User.where(:email => user.email) %>
+  <% @userList.each do |match|%>
+<% if match.position_id == 'member' %>
+  <div class='button_center'>
+    <%= button_to "Points Breakdown", attendance_path(match), method: :get, class: 'button' %>
+  </div>
+<% else %>
+    <div class="users index">
 
-<div class="users index">
-
-  <h1>Members</h1>
-  <table class="listing" summary="User list" cellspacing="10" style="width:1800px">
-    <tr class="header"  style="text-align:left">
-      <th>NetID</th>
-      <th>Email</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Position</th>
-      <th>Points</th>
-    </tr>
-    <% @users.each do |user| %>
-    <tr  style="text-align:left">
-      <td><%= user.username %></td>
-      <td><%= user.email %></td>
-      <td><%= user.first_name %></td>
-      <td><%= user.last_name %></td>
-      <td><%= user.position_id %></td>
-      <td><%= user.member_points %></td>
-      <% @userList.each do |match|%>
-      <td class="actions">
-          <%= link_to("Points Breakdown", attendance_path(user), :class => 'action show') %>
-      </td>
+    <h1>Members</h1>
+    <table class="listing" summary="User list" cellspacing="10" style="width:1800px">
+      <tr class="header"  style="text-align:left">
+        <th>NetID</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Position</th>
+        <th>Points</th>
+      </tr>
+      <% @users.each do |user| %>
+      <tr  style="text-align:left">
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.position_id %></td>
+        <td><%= user.member_points %></td>
+        <% @userList.each do |match|%>
+        <td class="actions">
+            <%= button_to "Points Breakdown", attendance_path(match), method: :get, class: 'table_button' %>
+        </td>
+        <% end %>
+      </tr>
       <% end %>
-    </tr>
-    <% end %>
-  </table>
+    </table>
+  <% end %>
+  <% end %>
+  <% end %>
