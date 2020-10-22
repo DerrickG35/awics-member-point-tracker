@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   resources :attendance
+  resources :event
   root to: 'users#index'
   devise_for :admins, controllers: { omniauth_callbacks: 'admins/omniauth_callbacks' }
   devise_scope :admin do
