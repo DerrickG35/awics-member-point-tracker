@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -10,6 +12,7 @@ ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = 'lGpyiH61bTysJfxLr8CkKbQa'
 Bundler.require(*Rails.groups)
 
 module AwicsMpt
+  # main application class for ruby on rails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0

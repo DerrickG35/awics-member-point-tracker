@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# class for creating admins that are able to access the curent dashboard page
+# part of the devise ecosystem, has a table that store each user permission account
 class DeviseCreateAdmins < ActiveRecord::Migration[6.0]
   def change
     create_table :admins do |t|

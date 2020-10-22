@@ -1,17 +1,13 @@
-<h1>Aggie Women in Computer Science</h1>
-
 <% if !flash[:notice].blank? %>
   <div class="notice">
     <%= flash[:notice] %>
   </div>
 <% end %>
 
-<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
-
 <div class="users show">
   <h2>Member Info</h2>
 
-  <table summary="User detail view" cellspacing="10">
+  <table class="table_center" summary="User detail view" cellspacing="10">
     <tr>
       <th style="text-align:left">First Name</th>
       <td><%= @user.first_name %></td>

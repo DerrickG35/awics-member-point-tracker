@@ -1,0 +1,28 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to Members List", users_path, :class => 'back-link') %>
+
+<div class="events show">
+  <h2 class='centerText' >Events List</h2>
+  <table class="listing" summary="Event list" cellspacing="10" style="width:1000px">
+    <tr class="header"  style="text-align:left">
+      <th>Meetings</th>
+      <th>Date</th>
+      <th>Points</th>
+      <th>Attendance</th>
+    </tr>
+    <% @events.each do |event| %>
+      <tr style="text-align:left">
+      <td><%= event.event_name %></td>
+      <td><%= event.date.strftime('%b %e, %Y') %></td>
+      <td><%= event.point_amount %></td>
+      <td><%= attendances = Attendance.where(:event_id => event.event_name).count %></td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>
