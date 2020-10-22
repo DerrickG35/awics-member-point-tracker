@@ -2,5 +2,3 @@
 /tmp
 /node_modules
 /log
-/log/development.log
-/tmp/pids/server.pid
