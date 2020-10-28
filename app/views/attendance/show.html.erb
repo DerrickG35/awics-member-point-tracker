@@ -13,17 +13,16 @@
       <th>Date</th>
       <th>Points</th>
     </tr>
-  <% @attendances.each do |attendance| %>
-    <tr style="text-align:left">
-      <td><%= attendance.event_id %></td>
-      <% @events.each do |event| %>
-          <% if event.event_name.match?(attendance.event_id)%>
-            <td><%= event.date.strftime('%b %e, %Y') %></td>
-            <td><%= event.point_amount * Position.where(position_title: @user.position_id).first.multiplier %></td>
-          <% end %>
-      <% end %>
-    </tr>
-  <% end %>
-</table>
-
+    <% @attendances.each do |attendance| %>
+      <tr style="text-align:left">
+        <td><%= attendance.event_id %></td>
+        <% @events.each do |event| %>
+            <% if event.event_name.match?(attendance.event_id)%>
+              <td><%= event.date.strftime('%b %e, %Y') %></td>
+              <td><%= event.point_amount * Position.where(position_title: @user.position_id).first.multiplier %></td>
+            <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
 </div>
