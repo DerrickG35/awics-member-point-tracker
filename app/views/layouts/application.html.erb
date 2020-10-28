@@ -25,7 +25,7 @@
           <% @current_user.each do |user| %>
             <% @userList = User.where(:email => user.email) %>
             <% @userList.each do |match|%>
-            <% if match.position_id == 'admin' %>
+            <% if match.admin %>
               <li><%= link_to "Members List", users_path %></li>
               <li><%= link_to "Add New Member", new_user_path %></li>
             <% end %>

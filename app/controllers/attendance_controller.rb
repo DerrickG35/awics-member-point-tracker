@@ -4,7 +4,7 @@
 class AttendanceController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @attendances = Attendance.where(username: @user.username)
+    @attendances = Attendance.where(user_id: @user.id)
     @events = Event.all
   end
 

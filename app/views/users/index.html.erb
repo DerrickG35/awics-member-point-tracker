@@ -12,9 +12,9 @@
       <% @userList = User.where(:email => user.email) %>
       <% @userList.each do |match|%>
         <% if !match.email.blank? %>
-          <p> Position: <%= match.position_id %> <p>
+          <p> Position: <%= match.admin %> <p>
         <% end %>
-        <% if match.position_id == 'member' %>
+        <% if match.admin %>
           <p> You currently have <%= match.member_points %> points.</p>
         <% else %>
           <p> You have permission to add users.</p>
@@ -32,7 +32,7 @@
 <% @current_user.each do |user| %>
   <% @userList = User.where(:email => user.email) %>
   <% @userList.each do |match|%>
-<% if match.position_id == 'member' %>
+<% if !match.admin %>
   <div class='button_center'>
     <%= button_to "Points Breakdown", attendance_path(match), method: :get, class: 'button' %>
   </div>
@@ -53,9 +53,9 @@
       <tr  style="text-align:left">
         <td><%= user.username %></td>
         <td><%= user.email %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.position_id %></td>
+        <td><%= user.firstname %></td>
+        <td><%= user.lastname %></td>
+        <td><%= user.admin %></td>
         <td><%= user.member_points %></td>
         <% @userList.each do |match|%>
         <td class="actions">

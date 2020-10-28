@@ -50,12 +50,18 @@ class UsersController < ApplicationController
 
   def update_points
     User.all.each do |user|
-      @username = user.username
-      @position_id = user.position_id
+      @username = user.id
+      @admin = user.admin
+      @position_id = ""
+      if @admin
+        @position_id = "1"
+      else
+        @position_id = "2"
+      end
       @events = Event.all
-      @attendances = Attendance.where(username: @username)
+      @attendances = Attendance.where(user_id: @username)
       @total_attendance = @attendances.count
-      @multiplier = Position.where(position_title: @position_id).first.multiplier
+      @multiplier = Position.where(position_id: @position_id).first.multiplier
       @total_points = 0
       @attendances.each do |attendance|
         @events.each do |event|
