@@ -53,13 +53,13 @@
       <tr  style="text-align:left">
         <td><%= user.username %></td>
         <td><%= user.email %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
+        <td><%= user.firstname %></td>
+        <td><%= user.lastname %></td>
         <td><%= user.position_id %></td>
         <td><%= user.member_points %></td>
         <% @userList.each do |match|%>
         <td class="actions">
-            <%= button_to "Points Breakdown", attendance_path(match), method: :get, class: 'table_button' %>
+            <%= button_to "Points Breakdown", attendance_path(user), method: :get, class: 'table_button' %>
         </td>
         <% end %>
       </tr>

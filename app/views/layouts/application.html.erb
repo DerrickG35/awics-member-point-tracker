@@ -21,18 +21,13 @@
     </div>
     <% if !current_page?new_admin_session_path %>
       <ul>
-          <% @current_user = Admin.where(id: 1) %>
-          <% @current_user.each do |user| %>
-            <% @userList = User.where(:email => user.email) %>
-            <% @userList.each do |match|%>
-            <% if match.position_id == 'admin' %>
-              <li><%= link_to "Members List", users_path %></li>
-              <li><%= link_to "Add New Member", new_user_path %></li>
-              <li><%= link_to "Events", event_path(match) %></li>
-            <% end %>
-          <% end %>
-          <% end %>
-          <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
+          <% match = User.where(:email => current_admin.email)[0] %>
+        <% if match.admin%>
+          <li><%= link_to "Members List", users_path %></li>
+          <li><%= link_to "Add New Member", new_user_path %></li>
+          <li><%= link_to "Events", event_path(match) %></li>
+        <% end %>
+        <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
       </ul>
     <% end %>
     <% if flash.any? %>
