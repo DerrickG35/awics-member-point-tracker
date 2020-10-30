@@ -3,24 +3,19 @@
       <h4 class='centerText'>Current Login: </h4>
 
 <div class='currentLoginCard'>
-  <% @current_user = Admin.where(id: 1) %>
-  <% @current_user.each do |user| %>
     <div class="avatarContainer">
-      <%= image_tag(user.avatar_url, :class => "userAvatar")   %>
+      <%= image_tag(current_admin.avatar_url, :class => "userAvatar")   %>
     </div>
-      <p> <%= user.full_name %> - <%= user.email %></p>
-      <% @userList = User.where(:email => user.email) %>
-      <% @userList.each do |match|%>
-        <% if !match.email.blank? %>
-          <p> Position: <%= match.position_id %> <p>
-        <% end %>
-        <% if match.position_id == 'member' %>
-          <p> You currently have <%= match.member_points %> points.</p>
-        <% else %>
-          <p> You have permission to add users.</p>
-        <% end %>
+      <p> <%= current_admin.full_name %> - <%= current_admin.email %></p>
+      <% match = User.where(:email => current_admin.email)[0] %>
+      <% if !match.email.blank? %>
+        <p> Position: <%= match.position_id %> <p>
       <% end %>
-  <% end %>
+      <% if match.position_id == 'member' %>
+        <p> You currently have <%= match.member_points %> points.</p>
+      <% else %>
+        <p> You have permission to add users.</p>
+      <% end %>
 </div>
 
 <% if !flash[:notice].blank? %>
@@ -28,17 +23,39 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-<% @current_user = Admin.where(id: 1) %>
-<% @current_user.each do |user| %>
-  <% @userList = User.where(:email => user.email) %>
-  <% @userList.each do |match|%>
-<% if match.position_id == 'member' %>
-  <div class='button_center'>
-    <%= button_to "Points Breakdown", attendance_path(match), method: :get, class: 'button' %>
-  </div>
-<% else %>
-    <div class="users index">
 
+<% match = User.where(:email => current_admin.email)[0] %>
+  <% if match.position_id == 'member' %>
+
+    <h1> Points Breakdown </h1>
+
+    <% @user = User.find(match[:id]) %>
+    <% @attendances = Attendance.where(username: @user.username) %>
+    <% @events = Event.all %>
+    <div class="users show">
+      <h3 class='centerText' >Total Points: <%= @user.member_points%></h3>
+      <table class="table_center" summary="User list" cellspacing="10" style="width:600px">
+        <tr class="header"  style="text-align:left">
+          <th>Meetings</th>
+          <th>Date</th>
+          <th>Points</th>
+        </tr>
+        <% @attendances.each do |attendance| %>
+          <tr style="text-align:left">
+            <td><%= attendance.event_id %></td>
+            <% @events.each do |event| %>
+                <% if event.event_name.match?(attendance.event_id)%>
+                  <td><%= event.date.strftime('%b %e, %Y') %></td>
+                  <td><%= event.point_amount * Position.where(position_title: @user.position_id).first.multiplier %></td>
+                <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+  <% else %>
+    <div class="users index">
     <h1>Members</h1>
     <table class="listing" summary="User list" cellspacing="10" style="width:1800px">
       <tr class="header"  style="text-align:left">
@@ -48,6 +65,7 @@
         <th>Last Name</th>
         <th>Position</th>
         <th>Points</th>
+        <th></th>
       </tr>
       <% @users.each do |user| %>
       <tr  style="text-align:left">
@@ -59,12 +77,10 @@
         <td><%= user.member_points %></td>
         <% @userList.each do |match|%>
         <td class="actions">
-            <%= button_to "Points Breakdown", attendance_path(user), method: :get, class: 'table_button' %>
+            <%= button_to "Points Breakdown", attendance_path(user.id), method: :get, class: 'table_button' %>
         </td>
         <% end %>
       </tr>
       <% end %>
     </table>
-  <% end %>
-  <% end %>
-  <% end %>
+<% end %>

@@ -14,11 +14,9 @@
       </tr>
       <tr>
         <th>Position</th>
-        <td><%= f.text_field(:position_id) %></td>
-      </tr>
-      <tr>
-        <th>Member Points</th>
-        <td><%= f.text_field(:member_points) %></td>
+        <td>
+          <%= f.select :position_id, [['Member','member'],['Admin','admin']] %>
+        </td>
       </tr>
       <tr>
         <th>NetID</th>
@@ -26,7 +24,7 @@
       </tr>
       <tr>
         <th>Email</th>
-        <td><%= f.text_field(:email) %></td>
+        <td><%= f.email_field(:email) %></td>
       </tr>
     </table>
     <div class='button_center'>

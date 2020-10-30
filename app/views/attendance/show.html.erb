@@ -13,6 +13,7 @@
       <th>Date</th>
       <th>Points</th>
     </tr>
+
     <% @events.each do |event| %>
       <tr style="text-align:left">
         <td><%= event.event_name %></td>
@@ -20,6 +21,5 @@
         <td><%= event.event_points * (@user.admin ? 2 : 1)%></td>
       </tr>
     <% end %>
-</table>
-
+  </table>
 </div>
