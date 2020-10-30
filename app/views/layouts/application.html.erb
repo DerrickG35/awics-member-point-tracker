@@ -21,8 +21,8 @@
     </div>
     <% if !current_page?new_admin_session_path %>
       <ul>
-      <% match = User.where(:email => current_admin.email)[0] %>
-        <% if match.position_id == 'admin' %>
+        <% match = User.where(:email => current_admin.email)[0] %>
+        <% if match.admin%>
           <li><%= link_to "Members List", users_path %></li>
           <li><%= link_to "Add New Member", new_user_path %></li>
           <li><%= link_to "Events", event_path(match) %></li>

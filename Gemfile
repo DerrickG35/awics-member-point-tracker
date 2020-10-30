@@ -28,6 +28,7 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'simplecov', require: false, group: :test
 
 gem 'rspec-core'
+gem 'rubocop', require: false
 
 # Authentication Gems
 gem 'devise'

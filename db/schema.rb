@@ -26,19 +26,25 @@ ActiveRecord::Schema.define(version: 2020_10_05_202741) do
   end
 
   create_table "attendances", force: :cascade do |t|
-    t.string "event_id"
-    t.string "username"
+    t.bigint "event_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_attendances_on_event_id"
+    t.index ["user_id"], name: "index_attendances_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
     t.string "event_name"
-    t.date "date"
-    t.time "time"
-    t.integer "point_amount"
+
+    t.datetime "event_date"
+    t.float "event_points"
+    t.text "question"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_events_on_event_id"
+
   end
 
   create_table "positions", force: :cascade do |t|
@@ -50,15 +56,23 @@ ActiveRecord::Schema.define(version: 2020_10_05_202741) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false
+    t.string "firstname"
+    t.string "lastname"
     t.string "position_id"
     t.integer "member_points"
     t.string "username"
-    t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "email"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
   end
 
 end

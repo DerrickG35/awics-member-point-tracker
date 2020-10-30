@@ -16,9 +16,9 @@
     <% @events.each do |event| %>
       <tr style="text-align:left">
       <td><%= event.event_name %></td>
-      <td><%= event.date.strftime('%b %e, %Y') %></td>
-      <td><%= event.point_amount %></td>
-      <td><%= attendances = Attendance.where(:event_id => event.event_name).count %></td>
+      <td><%= event.event_date.strftime('%b %e, %Y') %></td>
+      <td><%= event.event_points %></td>
+      <td><%= attendances = Event.where(:event_name => event.event_name).count %></td>
       </tr>
     <% end %>
   </table>
