@@ -9,7 +9,7 @@
       <p> <%= current_admin.full_name %> - <%= current_admin.email %></p>
       <% match = User.where(:email => current_admin.email)[0] %>
       <% if !match.email.blank? %>
-        <p> Position: <%= match.position_id %> <p>
+        <p> Position: <%= match.admin ? 'Admin' : 'Member' %> <p>
       <% end %>
       <% if match.position_id == 'member' %>
         <p> You currently have <%= match.member_points %> points.</p>
@@ -73,13 +73,11 @@
         <td><%= user.email %></td>
         <td><%= user.firstname %></td>
         <td><%= user.lastname %></td>
-        <td><%= user.position_id %></td>
+        <td><%= user.admin ? 'Admin' : 'Member' %></td>
         <td><%= user.member_points %></td>
-        <% @userList.each do |match|%>
         <td class="actions">
             <%= button_to "Points Breakdown", attendance_path(user.id), method: :get, class: 'table_button' %>
         </td>
-        <% end %>
       </tr>
       <% end %>
     </table>
