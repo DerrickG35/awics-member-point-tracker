@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def index
     update_points
     @users = User.sorted
+    # @users = User.order(params[:position])
   end
 
   def show
@@ -45,24 +46,17 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :position_id, :member_points, :username, :password)
+    params.require(:user).permit(:first_name, :last_name, :position_id, :member_points, :email, :username, :password)
   end
 
   def update_points
     User.all.each do |user|
-      @username = user.username
-      @position_id = user.position_id
-      @events = Event.all
-      @attendances = Attendance.where(username: @username)
-      @total_attendance = @attendances.count
-      @multiplier = Position.where(position_title: @position_id).first.multiplier
+      @events = user.events
       @total_points = 0
-      @attendances.each do |attendance|
-        @events.each do |event|
-          @total_points += (event.point_amount * @multiplier) if event.event_name.match?(attendance.event_id)
-        end
+      @events.each do |event|
+        @total_points += event.event_points
       end
-      user.update_attributes(member_points: @total_points)
+      user.update_attributes(member_points: @total_points * (user.admin ? 2 : 1))
     end
   end
 end
