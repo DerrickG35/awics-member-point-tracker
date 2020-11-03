@@ -69,7 +69,7 @@
       </tr>
       <% @users.each do |user| %>
       <tr  style="text-align:left">
-        <td><%= user.username %></td>
+        <td><%= user.email.split('@')[0] %></td>
         <td><%= user.email %></td>
         <td><%= user.firstname %></td>
         <td><%= user.lastname %></td>
