@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :position_id, :member_points, :email, :username, :password)
+    params.require(:user).permit(:firstname, :lastname, :admin, :member_points, :email, :username, :password)
   end
 
   def update_points

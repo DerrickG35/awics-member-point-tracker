@@ -18,20 +18,14 @@
       <% end %>
 </div>
 
-<% if !flash[:notice].blank? %>
-  <div class="notice">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
 
 <% match = User.where(:email => current_admin.email)[0] %>
-  <% if match.position_id == 'member' %>
-
+  <% if !match.admin %>
     <h1> Points Breakdown </h1>
 
     <% @user = User.find(match[:id]) %>
-    <% @attendances = Attendance.where(username: @user.username) %>
-    <% @events = Event.all %>
+    <% @attendances = @user.attendances %>
+    <% @events = @user.events %>
     <div class="users show">
       <h3 class='centerText' >Total Points: <%= @user.member_points%></h3>
       <table class="table_center" summary="User list" cellspacing="10" style="width:600px">
@@ -40,15 +34,12 @@
           <th>Date</th>
           <th>Points</th>
         </tr>
-        <% @attendances.each do |attendance| %>
+
+        <% @events.each do |event| %>
           <tr style="text-align:left">
-            <td><%= attendance.event_id %></td>
-            <% @events.each do |event| %>
-                <% if event.event_name.match?(attendance.event_id)%>
-                  <td><%= event.date.strftime('%b %e, %Y') %></td>
-                  <td><%= event.point_amount * Position.where(position_title: @user.position_id).first.multiplier %></td>
-                <% end %>
-            <% end %>
+            <td><%= event.event_name %></td>
+            <td><%= event.event_date.strftime('%b %e, %Y') %></td>
+            <td><%= event.event_points * (@user.admin ? 2 : 1)%></td>
           </tr>
         <% end %>
       </table>

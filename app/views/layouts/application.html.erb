@@ -25,9 +25,11 @@
         <% if match.admin%>
           <li><%= link_to "Members List", users_path %></li>
           <li><%= link_to "Add New Member", new_user_path %></li>
-          <li><%= link_to "Events", event_path(match) %></li>
+        <% else %>
+          <li><%= link_to "My Points", users_path %></li>
         <% end %>
-        <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
+          <li><%= link_to "Events", event_path(match) %></li>
+          <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
       </ul>
     <% end %>
     <% if flash.any? %>
