@@ -11,7 +11,7 @@
       <% if !match.email.blank? %>
         <p> Position: <%= match.admin ? 'Admin' : 'Member' %> <p>
       <% end %>
-      <% if match.position_id == 'member' %>
+      <% if !match.admin %>
         <p> You currently have <%= match.member_points %> points.</p>
       <% else %>
         <p> You have permission to add users.</p>
