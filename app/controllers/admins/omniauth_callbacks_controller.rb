@@ -7,17 +7,30 @@ module Admins
       admin = Admin.from_google(from_google_params)
 
       if admin.present?
-        sign_out_all_scopes
-        flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
-        sign_in_and_redirect admin, event: :authentication
+        # sign_out_all_scopes
+        # flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
+        # sign_in_and_redirect admin, event: :authentication
+        if !User.where(email: admin.email).empty?
+          sign_out_all_scopes
+          flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
+          sign_in_and_redirect admin, event: :authentication
+        else
+          flash[:alert] =
+          t 'devise.omniauth_callbacks.failure',
+            kind: 'Google',
+            reason: "#{auth.info.email} has not yet been added to the system. Contact an admin to be added."
+          redirect_to new_admin_session_path
+        end
+
       else
         flash[:alert] =
           t 'devise.omniauth_callbacks.failure',
             kind: 'Google',
-            reason: "#{auth.info.email} is not a valid
-             Texas A&M gmail account, or you have not been added to the system."
+            reason: "#{auth.info.email} is not a valid Texas A&M gmail account."
         redirect_to new_admin_session_path
       end
+
+
     end
 
     protected
