@@ -51,10 +51,14 @@ class UsersController < ApplicationController
 
   def update_points
     User.all.each do |user|
-      @events = user.events
+      @events = Event.all.uniq {|f| [ f.event_name ]}
       @total_points = 0
       @events.each do |event|
-        @total_points += event.event_points
+        event.users.each do |attendance|
+          if attendance.id == user.id
+            @total_points += event.event_points
+          end
+        end
       end
       user.update_attributes(member_points: @total_points * (user.admin ? 2 : 1))
     end
