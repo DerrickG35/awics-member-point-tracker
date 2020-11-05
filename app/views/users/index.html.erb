@@ -25,7 +25,7 @@
 
     <% @user = User.find(match[:id]) %>
     <% @attendances = @user.attendances %>
-    <% @events = @user.events %>
+    <% @events = Event.all.uniq {|f| [ f.event_name ]} %>
     <div class="users show">
       <h3 class='centerText' >Total Points: <%= @user.member_points%></h3>
       <table class="table_center" summary="User list" cellspacing="10" style="width:600px">
@@ -36,12 +36,12 @@
         </tr>
 
         <% @events.each do |event| %>
-          <tr style="text-align:left">
-            <td><%= event.event_name %></td>
+        <%event.users.each do |user|%>
+          <% if user.id == @user.id%>
+            <td><%= event.event_name%></td>
             <td><%= event.event_date.strftime('%b %e, %Y') %></td>
             <td><%= event.event_points * (@user.admin ? 2 : 1)%></td>
-          </tr>
-        <% end %>
+          <% end %>
       </table>
     </div>
 
