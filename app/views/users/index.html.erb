@@ -36,6 +36,7 @@
         </tr>
 
         <% @events.each do |event| %>
+          <tr style="text-align:left">
           <%event.users.each do |user|%>
             <% if user.id == @user.id%>
               <td><%= event.event_name%></td>
