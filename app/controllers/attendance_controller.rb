@@ -4,8 +4,8 @@
 class AttendanceController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @attendances = @user.attendances
-    @events = @user.events
+    @attendances = Attendance.all
+    @events = Event.all.uniq {|f| [ f.event_name ]}
   end
 
   private
