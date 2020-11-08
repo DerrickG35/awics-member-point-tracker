@@ -1,6 +1,10 @@
 <%# <h1>Aggie Women in Computer Science</h1> %>
+<div class="docGuide">
+    <p> <%= link_to "Documentation / User Guide", '../guide'  %> </p>
+</div>
+
 <h3 class='centerText'>Dashboard</h3>
-      <h4 class='centerText'>Current Login: </h4>
+<h4 class='centerText'>Current Login: </h4>
 
 <div class='currentLoginCard'>
     <div class="avatarContainer">
@@ -25,8 +29,8 @@
 <% end %>
 
 <% match = User.where(:email => current_admin.email)[0] %>
-  <% if match.position_id == 'member' %>
 
+  <% if match.admin == 'member' %>
     <h1> Points Breakdown </h1>
 
     <% @user = User.find(match[:id]) %>

@@ -17,4 +17,8 @@ Rails.application.routes.draw do
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  # towards the end of routes.rb
+  get "/:page" => "static#show"
+
 end

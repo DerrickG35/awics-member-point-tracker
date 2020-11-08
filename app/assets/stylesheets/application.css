@@ -112,3 +112,33 @@
     margin: 15px;
     border-radius: 15px;
 }
+
+.docGuide {
+    margin: auto;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.guideText{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.guidePhoto {
+    border-radius: 5%;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.guidePhotoSmall {
+    border-radius: 5%;
+    border: 1px solid black;
+    width: 25%;
+}
+
+.guideTitle {
+    background-color: grey;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
