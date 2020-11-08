@@ -1,1 +1,1 @@
-awics-member-point-tracker
+# awics-member-point-tracker deployment and use instructions
