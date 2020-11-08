@@ -1,0 +1,7 @@
+# awics-member-point-tracker deployment and use instructions
+
+Instructions for Use:
+The Member Point Tracker application uses google authentication through TAMU google accounts to login. In order to be able to login users must be registered in the database. This can be done by signing up on the participation tracker application with a authentic TAMU email. Once logged in admins will be taken to a home page where they will be able to see all the members of AWICS as well as a button to see the points breakdown of individual members. Regular members will be taken to a home page where they will only be able to see their own points as well as the points breakdown. In the top a navigation bar will allow the user to navigate between the home page(member list) and an event list showing details of past and future events.
+
+Running on Heroku:
+In order to work with the Participation Tracker application you will first need to locate the postgresql database url and password on Heroku. Once obtained go to the database.yml file and change the username and password on line 23 and 24 to the url and password of the postgresql database on Heroku. From here you can push the app to Heroku through the command line on any terminal by first logging in with "heroku login" then after you are logged in create an empty application by running "heroku create". Once created push everything to the Heroku application by running "git push heroku master" and finally "heroku open"

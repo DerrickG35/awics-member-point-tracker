@@ -14,12 +14,16 @@
       <th>Points</th>
     </tr>
 
-    <% @events.each do |event| %>
-      <tr style="text-align:left">
-        <td><%= event.event_name %></td>
-        <td><%= event.event_date.strftime('%b %e, %Y') %></td>
-        <td><%= event.event_points * (@user.admin ? 2 : 1)%></td>
-      </tr>
-    <% end %>
+      <% @events.each do |event| %>
+        <tr style="text-align:left">
+        <%event.users.each do |user|%>
+          <% if user.id == @user.id%>
+            <td><%= event.event_name%></td>
+            <td><%= event.event_date.strftime('%b %e, %Y') %></td>
+            <td><%= event.event_points * (@user.admin ? 2 : 1)%></td>
+          <% end %>
+      <% end %>
+    </tr>
+  <% end %>
   </table>
 </div>

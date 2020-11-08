@@ -11,14 +11,12 @@
       <th>Meetings</th>
       <th>Date</th>
       <th>Points</th>
-      <th>Attendance</th>
     </tr>
     <% @events.each do |event| %>
       <tr style="text-align:left">
       <td><%= event.event_name %></td>
       <td><%= event.event_date.strftime('%b %e, %Y') %></td>
       <td><%= event.event_points %></td>
-      <td><%= attendances = Event.where(:event_name => event.event_name).count %></td>
       </tr>
     <% end %>
   </table>

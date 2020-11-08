@@ -15,27 +15,23 @@
       <% if !match.email.blank? %>
         <p> Position: <%= match.admin ? 'Admin' : 'Member' %> <p>
       <% end %>
-      <% if match.position_id == 'member' %>
+      <% if !match.admin %>
         <p> You currently have <%= match.member_points %> points.</p>
       <% else %>
         <p> You have permission to add users.</p>
       <% end %>
 </div>
 
-<% if !flash[:notice].blank? %>
-  <div class="notice">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
 
 <% match = User.where(:email => current_admin.email)[0] %>
 
-  <% if match.admin == 'member' %>
+  <% if !match.admin %>
+
     <h1> Points Breakdown </h1>
 
     <% @user = User.find(match[:id]) %>
-    <% @attendances = Attendance.where(username: @user.username) %>
-    <% @events = Event.all %>
+    <% @attendances = @user.attendances %>
+    <% @events = Event.all.uniq {|f| [ f.event_name ]} %>
     <div class="users show">
       <h3 class='centerText' >Total Points: <%= @user.member_points%></h3>
       <table class="table_center" summary="User list" cellspacing="10" style="width:600px">
@@ -44,16 +40,16 @@
           <th>Date</th>
           <th>Points</th>
         </tr>
-        <% @attendances.each do |attendance| %>
+
+        <% @events.each do |event| %>
           <tr style="text-align:left">
-            <td><%= attendance.event_id %></td>
-            <% @events.each do |event| %>
-                <% if event.event_name.match?(attendance.event_id)%>
-                  <td><%= event.date.strftime('%b %e, %Y') %></td>
-                  <td><%= event.point_amount * Position.where(position_title: @user.position_id).first.multiplier %></td>
-                <% end %>
+          <%event.users.each do |user|%>
+            <% if user.id == @user.id%>
+              <td><%= event.event_name%></td>
+              <td><%= event.event_date.strftime('%b %e, %Y') %></td>
+              <td><%= event.event_points * (@user.admin ? 2 : 1)%></td>
             <% end %>
-          </tr>
+          <% end %>
         <% end %>
       </table>
     </div>
