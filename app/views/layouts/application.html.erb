@@ -24,7 +24,6 @@
         <% match = User.where(:email => current_admin.email)[0] %>
         <% if match.admin%>
           <li><%= link_to "Members List", users_path %></li>
-          <li><%= link_to "Add New Member", new_user_path %></li>
         <% else %>
           <li><%= link_to "My Points", users_path %></li>
         <% end %>

@@ -1,8 +1,19 @@
 <h1>Member Point Tracker</h1>
 <div class='loginCard'>
-    <h2 class='titleHeader'>Member Point Tracker</h2>
-    <h4 class='subtitleHeader'>Click the button below to login with your TAMU associated google account</h4>
+    <h4 class='subtitleHeader'>Click the button below to login with your TAMU associated google account. If you do not have an account registered please sign up through the participation tracker application.</h4>
     <div class='buttonContainer'>
         <%= button_to "Login", admin_google_oauth2_omniauth_authorize_path, {class: 'button'} %>
     </div>
+</div>
+<div class='instruction_heading'>
+  <p>Instructions for use:</p>
+</div>
+<div class='instruction'>
+  <p>The Member Point Tracker application uses google authentication through TAMU google accounts to login.
+  In order to be able to login users must be registered in the database.
+  This can be done by signing up on the participation tracker application with a authentic TAMU email.
+  Once logged in admins will be taken to a home page where they will be able to see all the members of AWICS as well as a button to see the points breakdown of individual members.
+  Regular members will be taken to a home page where they will only be able to see their own points as well as the points breakdown.
+  In the top a navigation bar will allow the user to navigate between the home page(member list) and an event list showing details of past and future events.
+  </p>
 </div>
