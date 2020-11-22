@@ -29,6 +29,7 @@
         <% end %>
           <li><%= link_to "Events", event_path(match) %></li>
           <li><%= link_to "User Guide", '../guide'  %> </li>
+          <li><%= link_to "How to Backup Data", asset_path("backup.pdf")  %> </li>
           <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
       </ul>
     <% end %>
