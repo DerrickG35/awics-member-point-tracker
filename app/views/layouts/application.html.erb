@@ -29,7 +29,10 @@
         <% end %>
           <li><%= link_to "Events", event_path(match) %></li>
           <li><%= link_to "User Guide", '../guide'  %> </li>
-          <li><%= link_to "How to Backup Data", asset_path("backup.pdf")  %> </li>
+        <% if match.admin%>
+          <li><%= link_to "Backing Up Data Info", asset_path("backup.pdf"),  target: :_blank%> </li>
+          <li><%= link_to "App Recover Info", asset_path("heroku.pdf"),  target: :_blank%> </li>
+        <% end %>
           <li><%= link_to "Sign Out", destroy_admin_session_path %></li>
       </ul>
     <% end %>
